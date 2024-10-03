@@ -33,7 +33,7 @@ import java.util.Scanner;
 
 public class MemberProfile {
 	public static void main(String[] args) throws InterruptedException {
-		//System.setProperty("webdriver.chrome.driver","D:\\Amit\\WebDrivers\\chromedriver_win32\\chromedriver.exe");																																											
+			//System.setProperty("webdriver.chrome.driver","D:\\Amit\\WebDrivers\\chromedriver_win32\\chromedriver.exe");																																											
 			//ChromeDriver VG=new ChromeDriver();	
 			WebDriver VG=new ChromeDriver();
 			//WebDriver driver=new ChromeDriver();
@@ -365,104 +365,7 @@ public class MemberProfile {
 			System.out.println("Test Case 34 : Save button is clicked  -Test Case Passed"); 			
 			
 		  	//VG.quit();
-			/*		    // To book appointment
-		    WebElement BookNow1=VG.findElement(By.xpath("(//a[@title=\"Book Now\"])[2]"));               
-		    BookNow1.click();
-		    System.out.println("Test Case 32  : Book now button is clicked  -Test Case Passed");
-		    Thread.sleep(5000);
-		    
-		    //To select Tomorrow date
-		    WebElement TomorrowDate1=VG.findElement(By.xpath("(//a[@class=\"currentday\"])[1]"));
-		    System.out.println("Test Case 33  : Selecting tomorrow date is clicked  -Test Case Passed");
-		    TomorrowDate1.click();
-		    Thread.sleep(5000);
-		    
-		    //To select Tomorrow date
-		    WebElement TomorrowNextDate1=VG.findElement(By.xpath("(//a[@class=\"currentday\"])[2]"));
-		    TomorrowNextDate1.click();
-		    System.out.println("Test Case 34  : Selecting day-after-tomorrow date is clicked  -Test Case Passed");
-		    Thread.sleep(5000);
-		    
-		    //To select Morning Timings
-		    WebElement Time1=VG.findElement(By.xpath("(//a[@id=\"appointimeeven\"])[3]"));
-		    Time1.click();
-		    System.out.println("Test Case 35  : Morning time is selected  -Test Case Passed");
-		    Thread.sleep(5000);
-		    
-		    //To select Evening Timings
-		    WebElement Time2=VG.findElement(By.xpath("(//a[@id=\"appointimeeven\"])[18]"));
-		    Time2.click();
-		    System.out.println("Test Case 36  : Evening time is selected  -Test Case Passed");
-		    Thread.sleep(5000);
-		    
-		    
-		    //To select V-Call button
-		    WebElement VCallBtn=VG.findElement(By.xpath("(//label[@class=\"video-call-btn\"])[1]"));
-		    VCallBtn.click();
-		    System.out.println("Test Case 37  : VCall radio-button is selected  -Test Case Passed");
-		    Thread.sleep(5000);
-		    
-		    //To select In-Person button
-		    WebElement InPersonBtn=VG.findElement(By.xpath("(//label[@class=\"physical-btn\"])[1]"));
-		    InPersonBtn.click();
-		    System.out.println("Test Case 38  : In-Person radio-button is selected  -Test Case Passed");
-		    Thread.sleep(5000);
-		  
-		    //To select Other button
-		    WebElement OtherBtn=VG.findElement(By.xpath("//div[@class=\"vg-book\"]"));
-		    OtherBtn.click();
-		    System.out.println("Test Case 39  : OtherBtn radio-button is selected  -Test Case Passed");
-		    Thread.sleep(5000);
-		    
-		    //To provide Name of other person
-		    WebElement OtherName=VG.findElement(By.xpath("//input[@id=\"OtherPatinetName\"]"));
-		    OtherName.sendKeys("Peri Peri");
-		    System.out.println("Test Case 40  : Name of other person is selected  -Test Case Passed");
-		    Thread.sleep(5000);
-		    
-		    //To provide Relation with other person
-		    WebElement OtherRelation=VG.findElement(By.xpath("//input[@id=\"OtherPatinetName\"]"));
-		    OtherRelation.sendKeys("Son");
-		    System.out.println("Test Case 41  : Relation with other person is selected  -Test Case Passed");
-		    Thread.sleep(5000);
-		    
-		    //To provide Reason
-		    WebElement Reason=VG.findElement(By.xpath("//input[@id=\"reason\"]"));
-		    Reason.sendKeys("Facing cough and cold");
-		    System.out.println("Test Case 42  :  Reason is selected  -Test Case Passed");
-		    Thread.sleep(5000);
-		    
-		    //To provide Age of other person
-		    WebElement Age1=VG.findElement(By.xpath("//input[@id=\"Age\"]"));
-		    Age1.sendKeys("22");
-		    System.out.println("Test Case 43  : Age of other person is selected  -Test Case Passed");
-		    Thread.sleep(5000);
-		    
-		    //To select Myself button
-		    WebElement MyselfBtn=VG.findElement(By.xpath("(//label[@class=\"physical-btn\"])[2]"));
-		    MyselfBtn.click();
-		    System.out.println("Test Case 44   : MyselfBtn radio-button is selected  -Test Case Passed");
-		    Thread.sleep(5000);
-		    // VG.switchTo().alert().accept();
-		    
-		    //To select Insurance Button
-		    WebElement InsuranceBtn=VG.findElement(By.xpath("//input[@id=\"SelectedPlan\"]"));
-		    InsuranceBtn.click();
-		    System.out.println("Test Case 45   : Insurance dropdown-button is clicked  -Test Case Passed");
-		    Thread.sleep(5000);
-		    
-		    //To select Specific Insurance Name from drop-down
-		    WebElement InsuranceName=VG.findElement(By.xpath("//*[@id=\"headingOne\"]/a/h4"));
-		    InsuranceName.click();
-		    System.out.println("Test Case 46   : Specific Insurance Name from drop-down is clicked  -Test Case Passed");
-		    Thread.sleep(5000);
-		    
-		    //To select Specific Insurance Category
-		    WebElement InsuranceVal=VG.findElement(By.xpath("//*[@id=\"ProvidersPlans_1\"]/div/ul/li[2]/a"));
-		    InsuranceVal.click();
-		    System.out.println("Test Case 47   : Specific Insurance Category is clicked  -Test Case Passed");
-		    Thread.sleep(5000);
-*/
+			
 			}
 
 	

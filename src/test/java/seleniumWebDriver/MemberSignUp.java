@@ -140,11 +140,11 @@ public class MemberSignUp {
 		//WebElement canceliconspanish =driver.findElement(By.xpath("//body/div[7]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[2]/input[2]")); 
 		Thread.sleep(5000); 
 		System.out.println("Test Case 12 : All inputs added are cleared-Test Case Passed"); 
-		firstname.sendKeys("Kapilia"); 
+		firstname.sendKeys("Automation"); 
 		Thread.sleep(1500); 
-		lastname.sendKeys("Doe"); 
+		lastname.sendKeys("SignUP"); 
 		Thread.sleep(1500); 
-		memberemail.sendKeys("anu.test0123@yopmail.com"); 
+		memberemail.sendKeys("anu.test_AT@yopmail.com"); 
 		Thread.sleep(1500); 
 		phonenumber.sendKeys("2345678910"); 
 		Thread.sleep(1500); 
