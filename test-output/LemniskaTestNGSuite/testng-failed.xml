@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [LemniskaTestNGSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="LemniskaTestNGTest(failed)">
+    <classes>
+      <class name="seleniumWebDriver.ReportOnTestNG">
+        <methods>
+          <include name="f"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- seleniumWebDriver.ReportOnTestNG -->
+      <class name="seleniumWebDriver.HMModule">
+        <methods>
+          <include name="Z"/>
+          <include name="A"/>
+          <include name="C"/>
+          <include name="B"/>
+          <include name="D"/>
+        </methods>
+      </class> <!-- seleniumWebDriver.HMModule -->
+    </classes>
+  </test> <!-- LemniskaTestNGTest(failed) -->
+</suite> <!-- Failed suite [LemniskaTestNGSuite] -->

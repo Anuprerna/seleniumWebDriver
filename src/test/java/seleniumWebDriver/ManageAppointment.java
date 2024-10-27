@@ -29,8 +29,18 @@ import org.openqa.selenium.Keys;
 import org.testng.Assert;
 
 import java.util.Scanner;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.*;
 
 public class ManageAppointment {
+	WebDriver VG=new ChromeDriver();
+	@Test
 	public static void main(String[] args) throws InterruptedException {
 		String WebsiteLink="https://qa.lemniska.com/";
 		String UserM="usa_member@yopmail.com";	
@@ -39,8 +49,8 @@ public class ManageAppointment {
 		String PasswrdD="XzNuP";
 		int TimeToSleep=2000,TC=1;
 		
-		
 		WebDriver VG=new ChromeDriver();
+		
 		
 		VG.get(WebsiteLink);																																												
 		VG.manage().window().maximize();																																												
@@ -347,4 +357,16 @@ public class ManageAppointment {
 	  	System.out.println("Test Case " +TC+ " :  Menu in History Apppointment is clicked  -Test Case Passed ");
 	  	TC++;
 	}
+	
+	@BeforeMethod
+    public void beforeMethod() {
+	System.out.println("Starting Test On Chrome Browser");
+    }
+	
+    @AfterMethod
+     public void afterMethod() {
+	 VG.close();
+	 System.out.println("Finished Test On Chrome Browser");
+    }
+
 }

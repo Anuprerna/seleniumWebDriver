@@ -29,6 +29,16 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import java.util.Scanner;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.openqa.selenium.support.ui.ExpectedConditions ;
 import org.openqa.selenium.support.ui.Wait;
@@ -58,12 +68,10 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 
-
-//import seleniumWebDriver.src.test.java.seleniumWebDriver.GetStartedPage;
-//seleniumWebDriver/src/test/java/seleniumWebDriver/GetStartedPage.java;
-public class MemberMerge {
-
-	public static void main(String[] args)  throws InterruptedException {
+public class LiveMemberMerge {
+	@Test
+	public static void main(String[] args)   throws InterruptedException  {
+		// TODO Auto-generated method stub
 		
 		/*--------------------------------------------------------------------------------------------------------------
 		 * 
@@ -86,13 +94,18 @@ public class MemberMerge {
 		 * 
 		 * 
 		 */
-		
+		String WebsiteLink="https://lemniska.com/";
+		String UserM="chhavi19jun@yopmail.com";	
+		String PasswrdM="Chhavi@123";
+		String UserD="usa_doctor@yopmail.com";	
+		String PasswrdD="XzNuP";
+		int TimeToSleep=5000,TC=1;
 		WebDriver VG=new ChromeDriver();
 		//ChromeDriver VG=new ChromeDriver();	
 		VG.get("https://lemniska.com/");	
 		VG.manage().window().maximize();	
-		Thread.sleep(5000);
-		int TimeToSleep=2000,TC=1;	
+		Thread.sleep(TimeToSleep);
+		//int TimeToSleep=TimeToSleep,TC=1;	
 		// to test the new landing page without login			
 		/// To click on get started 	
 		
@@ -106,7 +119,7 @@ public class MemberMerge {
 		System.out.println("Test Case " +TC+  " :Get started is Not present -Test Case Failled");			
 		TC++;
 		}			
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 					
 					
 					
@@ -124,7 +137,7 @@ public class MemberMerge {
 		System.out.println( "Test Case " +TC+ " :How It works is Not present -Test Case Failled");
 		TC++;
 		}			
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 					
 					
 					
@@ -139,7 +152,7 @@ public class MemberMerge {
 		System.out.println("Test Case " +TC+ ": Faq's is Not present -Test Case Failled");
 		TC++;
 		}			
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 					
 					
 					
@@ -153,7 +166,7 @@ public class MemberMerge {
 		System.out.println("Test Case " +TC+ " : Healthy Media is Not present -Test Case Failled");	
 		TC++;
 		}			
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 					
 		//To check the Invite Now			
 					
@@ -166,7 +179,7 @@ public class MemberMerge {
 		System.out.println("Test Case " +TC+ ": Invite Now is Not present -Test Case Failled");	
 		TC++;
 		}			
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 					
 					
 		//To check the Login			
@@ -180,7 +193,7 @@ public class MemberMerge {
 		System.out.println("Test Case " +TC+ " : Log In is Not present -Test Case Failed");
 		TC++;
 		}			
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 					
 					
 				
@@ -200,7 +213,7 @@ public class MemberMerge {
 		System.out.println("Test Case " +TC+ " : Security & Privacy is Not present -Test Case Failled");
 		TC++;
 		}			
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 					
 		//To check the	Terms & Conditions		
 					
@@ -213,7 +226,7 @@ public class MemberMerge {
 		System.out.println("Test Case " +TC+ " : Terms & Conditions is Not present -Test Case Failled");	
 		TC++;
 		}			
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 					
 		//To check the	HIPAA		
 					
@@ -226,7 +239,7 @@ public class MemberMerge {
 		System.out.println("Test Case " +TC+ ": HIPAA is Not present -Test Case Failled");
 		TC++;
 		}			
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 					
 				
 		VG.findElement(By.linkText("How It Works")).click();			
@@ -235,7 +248,7 @@ public class MemberMerge {
 					
 		System.out.println("Test Case " +TC+ " : How It Works is present and clickable -Test Case Passed");	
 		TC++;
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 		//title validate 			
 		String HowitworksTitle=VG.findElement(By.xpath("//h2[contains(text(),'How Lemniska Works')]")).getText();			
 		System.out.println("Test Case " +TC+ " : Title is "+HowitworksTitle);
@@ -251,9 +264,9 @@ public class MemberMerge {
 					
 		
 					
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 		VG.navigate().back();			
-		Thread.sleep(4500);			
+		Thread.sleep(TimeToSleep);			
 		VG.navigate().refresh();			
 					
 		// to test the FAQ Flow			
@@ -263,7 +276,7 @@ public class MemberMerge {
 		System.out.println("Test Case " +TC+ " : Faq is present and clickable -Test Case Passed");	
 		TC++;
 		
-		Thread.sleep(5000);			
+		Thread.sleep(TimeToSleep);			
 		//title validate 		
 		
 	
@@ -287,11 +300,11 @@ public class MemberMerge {
 //		 	System.out.println("Test Case " +TC+ "20 : Assert is working");		
 					
 		VG.navigate().back();			
-		Thread.sleep(4500);			
+		Thread.sleep(TimeToSleep);			
 		VG.navigate().refresh();			
 					
 		VG.findElement(By.linkText("Healthy Media")).click();			
-		Thread.sleep(3500);			
+		Thread.sleep(TimeToSleep);			
 		System.out.println("Test Case " +TC+ " : Healthy Media is present and clickable -Test Case Passed");
 		TC++;
 					
@@ -303,22 +316,22 @@ public class MemberMerge {
 		TC++;
 		
 		VG.navigate().back();			
-		Thread.sleep(4500);			
+		Thread.sleep(TimeToSleep);			
 		VG.navigate().refresh();			
 					
 					
 		// to validate the Invite now 			
-		Thread.sleep(6000);	
+		Thread.sleep(TimeToSleep);	
 		
 		// Banner Code
 		//VG.findElement(By.className("LMokaybtnforal")).click();		
-		Thread.sleep(5000);
+		Thread.sleep(TimeToSleep);
 					
 		VG.findElement(By.linkText("Invite Now")).click();			
 		Thread.sleep(3500);			
 		System.out.println("Test Case " +TC+ " : Invite Now is present and clickable -Test Case Passed");	
 		TC++;
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 					
 					
 		//title validate 			
@@ -326,34 +339,34 @@ public class MemberMerge {
 		//to click on cancel 			
 					
 		VG.findElement(By.className("bootbox-cancel")).click();			
-		Thread.sleep(1500);			
+		Thread.sleep(TimeToSleep);			
 		//to click on login 			
 		VG.findElement(By.linkText("Invite Now")).click();			
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 		VG.findElement(By.xpath("/html/body/div[8]/div/div/div[2]/button[2]")).click();			
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 					
 		VG.navigate().back();			
-		Thread.sleep(2500);			
+		Thread.sleep(TimeToSleep);			
 					
 					
-		System.out.println("Test Case " +TC+ " : Inviteicon validation working as expected");	
+		System.out.println("Test Case " +TC+ " : Invite icon validation working as expected");	
 		TC++;
 					
-		Thread.sleep(5500);			
+		Thread.sleep(TimeToSleep);			
 		//VG.findElement(By.className("LMokaybtnforal")).click();		
 		Thread.sleep(5000);			
 					
 		//to check for the security and privacy 			
-		Thread.sleep(4000);			
+		Thread.sleep(TimeToSleep);			
 		VG.findElement(By.linkText("Security & Privacy")).click();			
-		Thread.sleep(3500);			
+		Thread.sleep(TimeToSleep);			
 		System.out.println("Test Case " +TC+ " :Security & Privacy is present and clickable -Test Case Passed");
 		TC++;
 					
 		ArrayList SP=new ArrayList(VG.getWindowHandles());			
 		VG.switchTo().window((String)SP.get(1));			
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 					
 					
 		String PrivacyURL=VG.getCurrentUrl();			
@@ -363,18 +376,18 @@ public class MemberMerge {
 		ArrayList SPback=new ArrayList(VG.getWindowHandles());			
 		VG.switchTo().window((String)SP.get(0));			
 					
-		Thread.sleep(4000);			
+		Thread.sleep(TimeToSleep);			
 		// to check for the Terms and conditions			
 					
 		VG.findElement(By.linkText("Terms & Conditions")).click();			
 					
-		Thread.sleep(3500);			
+		Thread.sleep(TimeToSleep);			
 		System.out.println("Test Case " +TC+ " :Security & Privacy is present and clickable -Test Case Passed");
 		TC++;
 					
 		ArrayList Ac=new ArrayList(VG.getWindowHandles());			
 		VG.switchTo().window((String)Ac.get(2));			
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 					
 					
 		String TCURL=VG.getCurrentUrl();			
@@ -385,18 +398,18 @@ public class MemberMerge {
 		VG.switchTo().window((String)SP.get(0));			
 					
 					
-		Thread.sleep(4000);			
+		Thread.sleep(TimeToSleep);			
 		// to check for the HIPAA			
 		VG.findElement(By.linkText("HIPAA")).click();			
 					
 					
-		Thread.sleep(3500);			
+		Thread.sleep(TimeToSleep);			
 		System.out.println("Test Case " +TC+ " :HIPAA is present and clickable -Test Case Passed");		
 		TC++;
 					
 		ArrayList HIPAA1=new ArrayList(VG.getWindowHandles());			
 		VG.switchTo().window((String)HIPAA1.get(3));			
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 					
 					
 		String HIPAAURL=VG.getCurrentUrl();			
@@ -405,7 +418,7 @@ public class MemberMerge {
 		TC++;
 		ArrayList HIPAA1back=new ArrayList(VG.getWindowHandles());			
 		VG.switchTo().window((String)SP.get(0)); 			
-		Thread.sleep(3500);			
+		Thread.sleep(TimeToSleep);			
 					
 		
 		// to Go to up
@@ -421,24 +434,25 @@ public class MemberMerge {
 		Thread.sleep(7500);			
 					
 		VG.findElement(By.xpath("//input[@id='Email']")).sendKeys("wjaa");			
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 		VG.findElement(By.xpath("//input[@id='Password']")).sendKeys("anu@123");			
 		Thread.sleep(2500);	
 		WebElement Eyeicon=VG.findElement(By.xpath("//span[@class='fa fa-fw fa-eye field-icon toggle-password']"));			
 
 		Eyeicon.click();
-		Thread.sleep(2000);			
+		Thread.sleep(TimeToSleep);			
 		Eyeicon.click();	
 		VG.findElement(By.xpath("//input[@id='RememberMe']")).click();			
 		
 		VG.findElement(By.xpath("//input[@id='loginBttn']")).click();			
 					
-		System.out.println("Test Case " +TC+ " : User is logged in ");		
+		System.out.println("Test Case " +TC+ " : User is on logged in page");		
 		TC++;
 		Thread.sleep(5000);			
 					
 		VG.quit();
-		System.out.println("Test Case " +TC+ " : Test Configuration : A-Get Started Module is working as expected on Chrome");																											
+		System.out.println("Test Case " +TC+ " : Test Configuration : A-Get Started Module is working as expected on Chrome");	
+		TC++;
 
 					
 					/*--------------------------------------------------------------------------------------------------------------
@@ -464,10 +478,10 @@ public class MemberMerge {
 					 */	
 		System.out.println("--------------------------------------------------CONTACT US & FAQ'S PAGE----------------------------------------------------");
 		WebDriver driver=new ChromeDriver();
-		driver.get("https://qa.lemniska.com/");
+		driver.get(WebsiteLink);
 		driver.manage().window().maximize();
 		
-		Thread.sleep(TC);
+		Thread.sleep(TimeToSleep);
 
 		/// To click on get started
 		WebElement GetStartedNow2 = driver.findElement(By.xpath("//body/div[7]/div[1]/div[1]/div[1]/main[1]/section[1]/div[1]/div[1]/div[1]/a[1]"));
@@ -484,7 +498,7 @@ public class MemberMerge {
 		/*WebElement okayicon = driver.findElement(By.className("LMokaybtnforal"));
 		okayicon.click();
 		System.out.println("Test Case " +TC+ " :Pop-up is present -Test Case Passed");
-		Thread.sleep(2000);*/
+		Thread.sleep(TimeToSleep);*/
 		GetStartedNow2.click();
 		Thread.sleep(5500);
 
@@ -494,20 +508,20 @@ public class MemberMerge {
 		System.out.println("Test Case " +TC+ " :Dropdown is selected  -Test Case Passed");
 		TC++;
 
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		driver.findElement(By.xpath("//header/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/a[1]"))
 				.click();
 		Thread.sleep(8000);
 
 		// To enter the valid email and password
 		WebElement EmailAddress = driver.findElement(By.xpath("//input[@id='Email']"));
-		EmailAddress.sendKeys("priya00@yopmail.com");
+		EmailAddress.sendKeys(UserM);
 		System.out.println("Test Case " +TC+ " :Email address is added  -Test Case Passed");
 		TC++;
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 
 		WebElement Password = driver.findElement(By.xpath("//input[@id='Password']"));
-		Password.sendKeys("Priya@6767");
+		Password.sendKeys(PasswrdM);
 		System.out.println("Test Case " +TC+ " :password is added  -Test Case Passed");
 		TC++;
 		Thread.sleep(2500);
@@ -521,7 +535,7 @@ public class MemberMerge {
 		System.out.println("Test Case " +TC+ " :Eye icon is pressed  -Test Case Passed");
 		TC++;
 
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		Eyeicon1.click();
 		System.out.println("Test Case " +TC+ " :Eye icon is pressed  -Test Case Passed");
 		TC++;
@@ -571,7 +585,7 @@ public class MemberMerge {
 		String CanceleedTab = driver.findElement(By.xpath("//h5[normalize-space()='Cancelled']")).getText();
 		System.out.println("Tab is :" + CanceleedTab);
 		driver.findElement(By.xpath("//h5[normalize-space()='Cancelled']")).click();
-		System.out.println(" Test Case "+TC+" : All Tabs are Displayed  -Test Case Passed");
+		System.out.println("Test Case "+TC+" : All Tabs are Displayed  -Test Case Passed");
 		TC++;
 		Thread.sleep(9000);
 
@@ -584,6 +598,7 @@ public class MemberMerge {
 		String ExpectedTitlepagecontactUs = ("Contact Us");
 		assertEquals(Titlecontactus, ExpectedTitlepagecontactUs);
 		System.out.println("Test Case " +TC+ " : Assert for contact Us page title is passed-Test Case Passed");
+		TC++;
 		Thread.sleep(5000);
 		// Submit button should be there
 		WebElement Submiticon = driver.findElement(By.xpath("//input[@id='smtbtn']"));
@@ -602,7 +617,7 @@ public class MemberMerge {
 		Thread.sleep(4000);
 		String Erroremail = driver.findElement(By.xpath("//span[@for='Enquiry']")).getText();
 		String ExpectedError = ("Enter enquiry");
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		assertEquals(Erroremail, ExpectedError);
 		System.out.println("Test Case " +TC+ " : Assert for the email is passed -Test Case Passed");
 		TC++;
@@ -611,7 +626,7 @@ public class MemberMerge {
 		// Error check for the Message Thread.sleep(4000); String Errormessage =
 		driver.findElement(By.xpath("//span[contains(text(),'Enter enquiry')]")).getText();
 		String ExpectedErrormessage = ("Enter enquiry");
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		assertEquals(Erroremail, ExpectedError);
 		System.out.println("Test Case " +TC+ " : Assert for the enquiry Message is passed -Test Case Passed");
 		TC++;
@@ -623,7 +638,7 @@ public class MemberMerge {
 
 		WebElement ContactUsName = driver.findElement(By.xpath("//input[@id='FullName']"));
 		ContactUsName.sendKeys("@$^%&^&^&&^%&^%^%^");
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		System.out.println("Test Case " +TC+ " : Random Keys are added-Test Case Passed");
 		TC++;
 		WebElement SubmitAFsymbol = driver.findElement(By.xpath("//input[@id='smtbtn']"));
@@ -635,7 +650,7 @@ public class MemberMerge {
 		// to check the numbers
 		WebElement ContactUsNameNumber = driver.findElement(By.xpath("//input[@id='FullName']"));
 		ContactUsNameNumber.sendKeys("12316544546");
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		System.out.println("Test Case " +TC+ " : Random numbers are added -Test Case Passed");
 		TC++;
 		WebElement SubmitAFnumber = driver.findElement(By.xpath("//input[@id='smtbtn']"));
@@ -646,7 +661,7 @@ public class MemberMerge {
 
 		WebElement ContactUsNamevalid = driver.findElement(By.xpath("//input[@id='FullName']"));
 		ContactUsNamevalid.sendKeys("Anuprerna Sharma");
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		System.out.println("Test Case " +TC+ " : Valid Name is added-Test Case Passed");
 		TC++;
 		WebElement contactusemail = driver.findElement(By.xpath("//input[@id='Email']"));
@@ -719,14 +734,14 @@ public class MemberMerge {
 		// to click on the patients base again
 
 		driver.findElement(By.xpath("//a[@id='nav-pat-tab']")).click();
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		System.out.println("Test Case " +TC+ "  :User navigated back to patient base -Test Case Passed");
 		TC++;
 
 		// to click on the link first link
 
 		driver.findElement(By.xpath("//span[contains(text(),'Can I use Lemniska to Book Appointments with any d')]")).click();
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		driver.findElement(By.xpath("//strong[contains(text(),'Click here.')]")).click();
 		System.out.println("Test Case " +TC+ " : Link 1 is selected -Test Case Passed");
 		TC++;
@@ -734,7 +749,7 @@ public class MemberMerge {
 		// user is navigated to manage appointment
 		// To check the Next page for store
 
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		ArrayList FAQlink1 = new ArrayList(driver.getWindowHandles());
 		driver.switchTo().window((String) FAQlink1.get(1));
 		Thread.sleep(5000);
@@ -744,12 +759,12 @@ public class MemberMerge {
 		System.out.println("Test Case " +TC+ "User landed on to page " + MAA);
 		TC++;
 
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 
 		// go back to the FAQ's again
 		ArrayList FAQlinkback = new ArrayList(driver.getWindowHandles());
 		driver.switchTo().window((String) FAQlink1.get(0));
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		System.out.println("Test Case " +TC+ " :Navigated to FAQ Page -Test Case Passed");
 		TC++;
 
@@ -757,17 +772,17 @@ public class MemberMerge {
 		WebElement secondlink = driver
 				.findElement(By.xpath("//span[normalize-space()='How do I cancel or re-schedule an appointment?']"));
 		secondlink.click();
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		driver.findElement(By.xpath("//span[normalize-space()='How do I cancel or re-schedule an appointment?']"));
 		secondlink.click();
 		Thread.sleep(1500);
 
 		driver.findElement(By.xpath("//span[normalize-space()='How do I cancel or re-schedule an appointment?']")).click();
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		//driver.findElement(By.xpath("//p[contains(text(),'Patient can cancel the appointment any time before')]//a[@class='text-driver2']")).click();
 		driver.findElement(By.xpath("/html/body/div[7]/div/div/div/section/div/div/div/div[2]/div/div/div[1]/div/div/div[2]/div/div/div/div/div[2]/div[5]/div[1]")).click();
 		//*[@id="accordionExample"]/div/div[2]/div[5]/div[1]
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		System.out.println("Test Case " +TC+ " :Link 2 is selected -Test Case Passed");
 		TC++;
 
@@ -776,19 +791,19 @@ public class MemberMerge {
 		
 		ArrayList FAQlink2 = new ArrayList(driver.getWindowHandles());
 		driver.switchTo().window((String) FAQlink2.get(1));
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		// validate the URL
 		String Contentlink2URl = driver.getCurrentUrl();
 		System.out.println("Content Received is " + Contentlink2URl);
-		Assert.assertEquals(Contentlink2URl, "https://qa.lemniska.com/manage-member-appointment");
+		Assert.assertEquals(Contentlink2URl, "https://lemniska.com/manage-member-appointment");
 		System.out.println("Test Case " +TC+ " :Assert for URL is Passed -Test Case Passed");
 		TC++;
 
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		// go back to the FAQ's again ArrayList FAQlink2back =
 		new ArrayList(driver.getWindowHandles());
 		driver.switchTo().window((String) FAQlink1.get(0));
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		System.out.println("Test Case " +TC+ " :Navigated to FAQ Page -Test Case Passed");
 		TC++;
 
@@ -797,54 +812,54 @@ public class MemberMerge {
 		// To open the menu bar
 		//driver.findElement(By.xpath("//span[contains(text(),'John Snow')]")).click();
 		driver.findElement(By.xpath("//*[@id=\"header-right-button\"]/div[3]/div/a/span")).click();
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		System.out.println("Test Case " +TC+ " :Menu bar is opened -Test Case Passed");
 		TC++;
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		driver.findElement(By.linkText("Log out")).click();
 		Thread.sleep(1500);
 		System.out.println("Test Case " +TC+ " :Logout is selected-Test Case Passed");
 		TC++;
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		driver.findElement(By.xpath("//button[normalize-space()='Yes']")).click();
 		System.out.println("Test Case " +TC+ " :Logout is done -Test Case Passed");
 		TC++;
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 
 		// click on the FAQ
 
 		driver.findElement(By.linkText("Faq's")).click();
 		System.out.println("Test Case " +TC+ " :FAQ's is opened -Test Case Passed");
 		TC++;
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 
 		// click on the link again
 		driver.findElement(By.xpath("//span[contains(text(),'Can I use Lemniska to Book Appointments with any d')]")).click();
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		driver.findElement(By.xpath("//strong[normalize-space()='Click here.']")).click();
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		// to click on the link first link
 		driver.findElement(By.xpath("//strong[contains(text(),'Click here.')]")).click();
 		System.out.println("Test Case " +TC+ " :Link 1 is selected again -Test Case Passed");
 		TC++;
 		// To check the Next page for store
 
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		ArrayList FAQlink1again = new ArrayList(driver.getWindowHandles());
 		driver.switchTo().window((String) FAQlink1again.get(3));
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		String Contentlinkagain = driver.findElement(By.xpath("//h2[contains(text(),'Doctor Sign up')]")).getText();
 		System.out.println("Content Received is " + Contentlinkagain);
 
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		// validate the link
 
 		String SignupURL = driver.getCurrentUrl();
 		System.out.println("Content Received is " + SignupURL);
-		Assert.assertEquals(SignupURL, "https://qa.lemniska.com/doctor-sign-up");
+		Assert.assertEquals(SignupURL, "https://lemniska.com/doctor-sign-up");
 		System.out.println("Test Case " +TC+ " :Assert for URL is Passed -Test Case Passed");
 		TC++;
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 
 		// click on the sign up without data
 
@@ -863,15 +878,15 @@ public class MemberMerge {
 		TC++;
 		WebElement FirstName = driver.findElement(By.xpath("//input[@id='FirstName']"));
 		FirstName.sendKeys("646546456");
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		FirstName.clear();
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		FirstName.sendKeys("Anu");
 		System.out.println("Test Case " +TC+ " : Random and Correct Keys are added to First Name");
 		TC++;
 		WebElement LastName = driver.findElement(By.xpath("//input[@id='LastName']"));
 		LastName.sendKeys("6464646546");
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		LastName.clear();
 		Thread.sleep(2500);
 		LastName.sendKeys("Sharma");
@@ -879,7 +894,7 @@ public class MemberMerge {
 		TC++;
 		WebElement Email = driver.findElement(By.xpath("//input[@id='Email']"));
 		Email.sendKeys("3464646546");
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		Email.clear();
 		Thread.sleep(2500);
 		Email.sendKeys("anu@s1.com");
@@ -887,11 +902,11 @@ public class MemberMerge {
 		TC++;
 		WebElement PhoneNumber = driver.findElement(By.xpath("//input[@id='Phone']"));
 		PhoneNumber.sendKeys("@@%$%^$^$^$");
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		PhoneNumber.clear();
 		Thread.sleep(2500);
 		PhoneNumber.sendKeys("3532145698");
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		System.out.println("Test Case " +TC+ " : Random and Correct Keys are added to PhoneNumber");
 		TC++;
 		WebElement Referral = driver.findElement(By.xpath("//input[@id='Mrcode']"));
@@ -1024,19 +1039,19 @@ public class MemberMerge {
 
 		ArrayList FAQlinkdocback = new ArrayList(driver.getWindowHandles());
 		driver.switchTo().window((String) FAQlink1.get(0));
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		System.out.println("Test Case " +TC+ " :Navigated to FAQ Page -Test Case Passed");
 		TC++;
 
 		// driver.findElement(ByXPath("//a[contains(text(),\"Faq's\")]").click();
-		// Thread.sleep(2000);
+		// Thread.sleep(TimeToSleep);
 		// System.out.println("Test Case " +TC+ " : FAQ icon is selected-Test case passed");
 		//TC++;
 		// enter doctor base
 		// driver.findElementByLinkText("//a[@id='nav-docs-tab']").click();
 		// System.out.println("Test Case " +TC+ " : DOCTOR�S KNOWLEDGE BASE is present-Test
 		// case passed");
-		// Thread.sleep(2000);
+		// Thread.sleep(TimeToSleep);
 		// click on the links available
 		driver.findElement(By.xpath("//span[normalize-space()='How do I cancel or re-schedule an appointment?']")).click();
 		System.out.println("Test Case " +TC+ " : DOCTOR�S KNOWLEDGE BASE link 1 is selected-Test case passed");
@@ -1047,21 +1062,21 @@ public class MemberMerge {
 				"//p[contains(text(),'Patient can cancel the appointment any time before')]//strong[contains(text(),'Click here')]")).click();
 		// to validate the URL
 
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		ArrayList FAQlinkdoc1 = new ArrayList(driver.getWindowHandles());
 		driver.switchTo().window((String) FAQlinkdoc1.get(4));
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		String doctorbase2url = driver.getCurrentUrl();
 		System.out.println("Content Received is " + doctorbase2url);
-		Assert.assertEquals(doctorbase2url, "https://qa.lemniska.com/policy/terms-and-conditions.pdf#page=3");  // https://qa.lemniska.com/doctor-sign-up
+		Assert.assertEquals(doctorbase2url, "https://lemniska.com/policy/terms-and-conditions.pdf#page=3");  // https://qa.lemniska.com/doctor-sign-up
 		System.out.println("Test Case " +TC+ " : Assert for URL is Passed -Test Case Passed");
 		TC++;
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 
 		// go back to the FAQ's again
 		ArrayList FAQlinkback1 = new ArrayList(driver.getWindowHandles());
 		driver.switchTo().window((String) FAQlink1.get(0));
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		System.out.println("Test Case " +TC+ " : Navigated to FAQ Page -Test Case Passed");
 		TC++;
 
@@ -1071,10 +1086,10 @@ public class MemberMerge {
 		// System.out.println("Test Case " +TC+ " : Link 1 is selected -Test Case Passed");
 		// To check the Next page for store
 
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		// ArrayList FAQlinkdoc = new ArrayList(driver.getWindowHandles());
 		// driver.switchTo().window((String) FAQlinkdoc.get(5));
-		// Thread.sleep(2000);
+		// Thread.sleep(TimeToSleep);
 		// String doctorbase2url2 = driver.getCurrentUrl();
 		// System.out.println("Content Received is " + doctorbase2url2);
 		// Assert.assertEquals(doctorbase2url2,
@@ -1082,14 +1097,14 @@ public class MemberMerge {
 
 		// System.out.println("Test Case " +TC+ " : Assert for URL is Passed -Test Case
 		// Passed");
-		// Thread.sleep(2000);
+		// Thread.sleep(TimeToSleep);
 
-		// Thread.sleep(2000);
+		// Thread.sleep(TimeToSleep);
 
 		// go back to the FAQ's again
 		// ArrayList FAQlinkback11 = new ArrayList(driver.getWindowHandles());
 		// driver.switchTo().window((String) FAQlink1.get(0));
-		// Thread.sleep(2000);
+		// Thread.sleep(TimeToSleep);
 		// System.out.println("Test Case " +TC+ " :Navigated to FAQ Page -Test Case Passed");
 
 		// login the user again
@@ -1098,7 +1113,7 @@ public class MemberMerge {
 
 		// go to the footer FAQ again
 		driver.findElement(By.xpath("//a[contains(text(),\"Faq's\")]")).click();
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		System.out.println("Test Case " +TC+ " : FAQ icon is selected-Test case passed");
 		
 		TC++;
@@ -1140,7 +1155,7 @@ public class MemberMerge {
             
 		
 		WebDriver driver1=new ChromeDriver();
-		driver1.get("http://qa.lemniska.com/");
+		driver1.get(WebsiteLink);
 		driver1.manage().window().maximize();
 		
 		Thread.sleep(5000); 
@@ -1154,7 +1169,7 @@ public class MemberMerge {
 		System.out.println("Test Case " +TC+ " :Get started is Not present -Test Case Failled"); 
 		TC++;
 		} 
-		Thread.sleep(2000);
+		Thread.sleep(TimeToSleep);
 		
 		//driver.findElement(By.className("LMokaybtnforal")).click();
 				
@@ -1165,7 +1180,7 @@ public class MemberMerge {
 		Thread.sleep(5500); 
 		//////////sign up icon ///////////////////////
 		WebElement Dropdownsignup=driver1.findElement(By.tagName("button")); 
-		Thread.sleep(2000); 
+		Thread.sleep(TimeToSleep); 
 		Dropdownsignup.click(); 
 		System.out.println("Test Case " +TC+ " : Dropdown icon is present -Test Case Passed");
 		TC++;
@@ -1175,16 +1190,16 @@ public class MemberMerge {
 		TC++;
 		Thread.sleep(3500); 
 		String MembersignupURL=driver1.getCurrentUrl(); 
-		Assert.assertEquals(MembersignupURL, "https://qa.lemniska.com/membership"); 
+		Assert.assertEquals(MembersignupURL, "https://lemniska.com/membership"); 
 		System.out.println("Test Case " +TC+ " : Assert for Member Sign Up page URL is passed");
 		TC++;
-		Thread.sleep(2000); 
+		Thread.sleep(TimeToSleep); 
 		//To validate the page title 
 		String MembersignupTitle=driver1.findElement(By.xpath("//h2[normalize-space()='Member Sign Up']")).getText(); 
 		Assert.assertEquals(MembersignupTitle, "Member Sign Up"); 
 		System.out.println("Test Case " +TC+ " : Assert for Member Sign Up Title is passed"); 
 		TC++;
-		Thread.sleep(2000); 
+		Thread.sleep(TimeToSleep); 
 		
 		//to test each value now 
 		WebElement firstname=driver1.findElement(By.xpath("//input[@id='FirstName']")); 
@@ -1317,7 +1332,7 @@ public class MemberMerge {
 		System.out.println("--------------------------------------------------MEMBER EDIT PROFILE PAGE----------------------------------------------------");
 		WebDriver VGq=new ChromeDriver();
 		//WebDriver driver=new ChromeDriver();
-		VGq.get("https://qa.lemniska.com/");																																												
+		VGq.get(WebsiteLink);																																												
 		VGq.manage().window().maximize();																																												
 		Thread.sleep(5000);	
 		
@@ -1332,7 +1347,7 @@ public class MemberMerge {
 				System.out.println("Test Case " +TC+ " : Get started is Not present -Test Case Failled");	
 				TC++;
 			}																																											
-		Thread.sleep(2000);																																												
+		Thread.sleep(TimeToSleep);																																												
 																																														
 		GetStartedNow1q.click();		
 		System.out.println("Test Case " +TC+ " : Get started icon is present and selected -Test Case Passed");
@@ -1345,23 +1360,23 @@ public class MemberMerge {
 				System.out.println("Test Case " +TC+ " : Dropdown is selected  -Test Case Passed");
 				TC++;
 
-		Thread.sleep(2000);																																												
+		Thread.sleep(TimeToSleep);																																												
 		VGq.findElement(By.xpath("//header/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/a[1]")).click();																																												
 		Thread.sleep(8000);	
 		
 		// To enter the valid email and password 
 		WebElement EmailAddress1q=VGq.findElement(By.xpath("//input[@id='Email']"));
-		EmailAddress1q.sendKeys("priya00@yopmail.com");	//automationcode@yopmail.com	
+		EmailAddress1q.sendKeys(UserM);		
 		System.out.println("Test Case " +TC+ " : Email address is added  -Test Case Passed");
 		TC++;
-	    Thread.sleep(2000);		
+	    Thread.sleep(TimeToSleep);		
 	    
 	    WebElement Password1q= VGq.findElement(By.xpath("//input[@id='Password']"));
-	    Password1q.sendKeys("Priya@6767");	//HkS2k	
+	    Password1q.sendKeys(PasswrdM);
 	     System.out.println("Test Case " +TC+ " : Password is added  -Test Case Passed");
 	     TC++;
 	    Thread.sleep(2500);	
-	    
+	     
 	    //To click on eye icon
 	    WebElement Eyeicon1A=VGq.findElement(By.xpath("/html/body/div[7]/div/div/div/section/div[1]/section/div/div/div[2]/div/div/div/form/div[2]/div/span[1]"));
 	    //old value //body/div[7]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/span[1]
@@ -1370,7 +1385,7 @@ public class MemberMerge {
 	     System.out.println("Test Case " +TC+ " : Eye-icon is clicked once  -Test Case Passed");
 	     TC++;
 
-	    Thread.sleep(2000);																																													
+	    Thread.sleep(TimeToSleep);																																													
 	    Eyeicon1A.click();
 	     System.out.println("Test Case " +TC+ " : Eye-icon is clicked again  -Test Case Passed");
 	     TC++;
@@ -1493,11 +1508,11 @@ public class MemberMerge {
 		TC++;
 		
 		//WebElement FName=VGq.findElement(By.xpath("/html/body/div[7]/div/div/div/form/section/div/div/div/div[2]/div/div[2]/div/div/div[1]/div/div[2]/input"));
-		FName.sendKeys("Priya");
+		FName.sendKeys("Chhavi");
 		Thread.sleep(3000);
 		
 		//WebElement LName=VGq.findElement(By.xpath("/html/body/div[7]/div/div/div/form/section/div/div/div/div[2]/div/div[2]/div/div/div[1]/div/div[3]/input"));
-		LName.sendKeys("Kaushik");
+		LName.sendKeys("Kashyap");
 		Thread.sleep(3000);
 		
 		//WebElement PNum=VGq.findElement(By.xpath("/html/body/div[7]/div/div/div/form/section/div/div/div/div[2]/div/div[2]/div/div/div[2]/div/div[3]/div/input[1]"));
@@ -1518,17 +1533,17 @@ public class MemberMerge {
 		
 		//To change the address																																													
 		/*VGq.findElement(By.id("Address1")).clear();																																		
-		Thread.sleep(2000);																																		
+		Thread.sleep(TimeToSleep);																																		
 		VGq.findElement(By.id("Address1")).sendKeys("Gaur city 2");																																		
 		System.out.println("Test Case 25 : Address name validation is tested : Test case passed");																																		
 		*/																				
 		//To change the State 																																													
 		/*VGq.findElement(By.id("StateProvinceId")).click();																																		
-		Thread.sleep(2000);																																		
+		Thread.sleep(TimeToSleep);																																		
 		VGq.findElement(By.xpath("//option[contains(text(),'Uttar Pradesh')]")).click();																																		
-		Thread.sleep(2000);																																		
+		Thread.sleep(TimeToSleep);																																		
 		VGq.findElement(By.id("CityName")).click();																																		
-		Thread.sleep(2000);																																		
+		Thread.sleep(TimeToSleep);																																		
 		System.out.println("Test Case 26 : City add validation is tested : Test case passed");																																		
 		*/																				
 		
@@ -1569,7 +1584,7 @@ public class MemberMerge {
 		
 		
 		//driver.quit();																																												
-		DOB.click();
+		//DOB.click();
 		Thread.sleep(3000);
 		
 		VGq.findElement(By.xpath("//*[@id=\"TimeZoneId\"]/option[1]")).click();////*[@id="TimeZoneId"]/option[1]
@@ -1708,10 +1723,7 @@ public class MemberMerge {
  * 
  * */
 	  	System.out.println("--------------------------------------------------SEARCH & DOCTOR LISTING PAGE----------------------------------------------------");
-	  		String WebsiteLink="https://qa.lemniska.com/";
-			String User="usa_member@yopmail.com";
-			String Passwrd="usa_member1@"; 		
-			
+	  		
 			WebDriver VGw=new ChromeDriver();
 			//WebDriver driver=new ChromeDriver();
 			
@@ -1730,7 +1742,7 @@ public class MemberMerge {
 					System.out.println("Test Case " +TC+ " : Get started is Not present -Test Case Failled");	
 					TC++;
 				}																																											
-			Thread.sleep(2000);																																												
+			Thread.sleep(TimeToSleep);																																												
 																																															
 			GetStartedNow1w.click();		
 			System.out.println("Test Case " +TC+ " : Get started icon is present and se3ected -Test Case Passed");
@@ -1743,19 +1755,19 @@ public class MemberMerge {
 					System.out.println("Test Case " +TC+ " : Dropdown is selected  -Test Case Passed");
 					TC++;
 
-			Thread.sleep(2000);																																												
+			Thread.sleep(TimeToSleep);																																												
 			VGw.findElement(By.xpath("//header/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/a[1]")).click();																																												
 			Thread.sleep(8000);	
 			
 			// To enter the valid email and password 
 			WebElement EmailAddress1w=VGw.findElement(By.xpath("//input[@id='Email']"));
-			EmailAddress1w.sendKeys(User);		
+			EmailAddress1w.sendKeys(UserM);		
 			System.out.println("Test Case " +TC+ " : Email address is added  -Test Case Passed");
 			TC++;
-		    Thread.sleep(2000);		
+		    Thread.sleep(TimeToSleep);		
 		    
 		    WebElement Password1w= VGw.findElement(By.xpath("//input[@id='Password']"));
-		    Password1w.sendKeys(Passwrd);	
+		    Password1w.sendKeys(PasswrdM);	
 		     System.out.println("Test Case " +TC+ " : Password is added  -Test Case Passed");
 		     TC++;
 		    Thread.sleep(2500);	
@@ -1767,7 +1779,7 @@ public class MemberMerge {
 		    TC++;
 
 		    //To click on eye icon again
-		    Thread.sleep(2000);																																													
+		    Thread.sleep(TimeToSleep);																																													
 		    Eyeicon1w.click();
 		    System.out.println("Test Case " +TC+ " : Eye-icon is clicked again  -Test Case Passed");
 		    TC++;
@@ -1854,7 +1866,7 @@ public class MemberMerge {
 		    
 		    //To check the Doctor/Clinic name text box availability
 		    WebElement DocClinicName = VGw.findElement(By.xpath("//*[@id=\"PName\"]"));
-		    DocClinicName.sendKeys("USA");
+		    DocClinicName.sendKeys("HARJAP");
 		    System.out.println("Test Case " +TC+ " : Doctor/clinic name is given  -Test Case Passed");
 		    TC++;
 		    Thread.sleep(5000);
@@ -2101,7 +2113,7 @@ public class MemberMerge {
 		    //To click on Country dropdown
 		    WebElement Country3 = VGw.findElement(By.xpath("//select[@id=\"search_Besed_CountryId\"]"));
 		    Country3.click();
-		    System.out.println("Test Case 53\"Test Case \" +TC+ \" : Country dropdown is clicked  -Test Case Passed");
+		    System.out.println("Test Case " +TC+ " : Country dropdown is clicked  -Test Case Passed");
 		    TC++;
 		    Thread.sleep(5000);
 		    
@@ -2119,10 +2131,22 @@ public class MemberMerge {
 		    TC++;
 		    Thread.sleep(5000);
 
-
+		    //To check the Doctor/Clinic name text box availability
+		    WebElement DocClinicName2s = VGw.findElement(By.xpath("//*[@id=\"PName\"]"));
+		    DocClinicName2s.sendKeys("Amarvir");
+		    System.out.println("Test Case " +TC+ " : Doctor/clinic name is given  -Test Case Passed");
+		    TC++;
+		    Thread.sleep(5000);
+		    
+		    //To click on Search button
+		    WebElement SearchBtn2f = VGw.findElement(By.xpath(" //*[@id=\"btn-search\"]"));
+		    SearchBtn2f.click();
+		    System.out.println("Test Case " +TC+ " : Search button is clicked  -Test Case Passed");
+		    TC++;
+		    Thread.sleep(5000);		    
 		    
 		    // To book appointment
-		    WebElement BookNow1=VGw.findElement(By.xpath("(//a[@title=\"Book Now\"])[2]"));               
+		    WebElement BookNow1=VGw.findElement(By.xpath("(//a[@title=\"Book Now\"])[1]"));               
 		    BookNow1.click();
 		    System.out.println("Test Case " +TC+ " : Book now button is clicked  -Test Case Passed");
 		    TC++;
@@ -2186,7 +2210,7 @@ public class MemberMerge {
 		    Thread.sleep(5000);
 		    
 		    //To provide Relation with other person
-		    WebElement OtherRelation=VGw.findElement(By.xpath("//input[@id=\"OtherPatinetName\"]"));
+		    WebElement OtherRelation=VGw.findElement(By.xpath("//*[@id=\"AppointmentsMaster_OtherPatientRelation\"]"));
 		    OtherRelation.sendKeys("Son");
 		    System.out.println("Test Case " +TC+ " : Relation with other person is selected  -Test Case Passed");
 		    TC++;
@@ -2222,14 +2246,14 @@ public class MemberMerge {
 		    Thread.sleep(5000);
 		    
  		    //To select Specific Insurance Name from drop-down
-		    WebElement InsuranceName=VGw.findElement(By.xpath("//*[@id=\"headingOne\"]/a/h4"));
+		    WebElement InsuranceName=VGw.findElement(By.xpath("//*[@id=\"headingOne\"]/a"));
 		    InsuranceName.click();
 		    System.out.println("Test Case " +TC+ " : Specific Insurance Name from drop-down is clicked  -Test Case Passed");
 		    TC++;
 		    Thread.sleep(5000);
 		    
 		    //To select Specific Insurance Category
-		    WebElement InsuranceValb=VGw.findElement(By.xpath("//*[@id=\"ProvidersPlans_1\"]/div/ul/li[2]/a"));
+		    WebElement InsuranceValb=VGw.findElement(By.xpath("//*[@id=\"ProvidersPlans_254\"]/div/ul/li[1]/a"));
 		    InsuranceValb.click();
 		    System.out.println("Test Case " +TC+ " : Specific Insurance Category is clicked  -Test Case Passed");
 		    TC++;
@@ -2264,16 +2288,15 @@ public class MemberMerge {
  * 
  * */	
 		    System.out.println("--------------------------------------------------BOOK APPOINTMENTS PAGE----------------------------------------------------");
-		String WebsiteLink1="https://qa.lemniska.com/";
-		String User1e="usa_member@yopmail.com";	
-		String Passwrd1e="usa_member1@"; 	
-		//int TimeToSleep=2000;
-		//int TC=1;
+		//String WebsiteLink1="https://qa.lemniska.com/";
+		//String User1e="usa_member@yopmail.com";	
+		//String Passwrd1e="usa_member1@"; 	
+		
 		
 		
 		WebDriver VGe=new ChromeDriver();
 		
-		VGe.get(WebsiteLink1);																																												
+		VGe.get(WebsiteLink);																																												
 		VGe.manage().window().maximize();																																												
 		Thread.sleep(TimeToSleep);		
 		
@@ -2307,13 +2330,13 @@ public class MemberMerge {
 		
 		// To enter the valid email and password 
 		WebElement EmailAddress1e=VGe.findElement(By.xpath("//input[@id='Email']"));
-		EmailAddress1e.sendKeys(User1e);		
+		EmailAddress1e.sendKeys(UserM);		
 		System.out.println("Test Case " +TC+ " : Email address is added  -Test Case Passed");
 		TC++;
 	    Thread.sleep(TimeToSleep);			
 	    
 	    WebElement Password1e= VGe.findElement(By.xpath("//input[@id='Password']"));
-	    Password1e.sendKeys(Passwrd1e);	
+	    Password1e.sendKeys(PasswrdM);	
 	     System.out.println("Test Case " +TC+ " : Password is added  -Test Case Passed");
 	     TC++;
 	    Thread.sleep(TimeToSleep);		
@@ -2345,7 +2368,7 @@ public class MemberMerge {
 	    
 	    //To check the Doctor/Clinic name text box availability
 	    WebElement DocClinicName1e = VGe.findElement(By.xpath("//*[@id=\"PName\"]"));
-	    DocClinicName1e.sendKeys("USA Doctor");
+	    DocClinicName1e.sendKeys("Amarvir");
 	    System.out.println("Test Case " +TC+ " : Doctor/clinic name is given  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(TimeToSleep);
@@ -2367,7 +2390,7 @@ public class MemberMerge {
 	    
  
 	    //To select Morning Timings
-	    WebElement Time1e=VGe.findElement(By.xpath("(//a[@id=\"appointimeeven\"])[8]"));
+	    WebElement Time1e=VGe.findElement(By.xpath("(//a[@id=\"appointimeeven\"])[2]"));
 	    Time1e.click();
 	    System.out.println("Test Case " +TC+ " : Morning time is selected  -Test Case Passed");
 	    TC++;
@@ -2404,7 +2427,8 @@ public class MemberMerge {
 	    Thread.sleep(TimeToSleep);	
 	    
 	    //Weekend popup			/html/body/div[8]/div/div/div[2]/button			
-	    VGe.findElement(By.xpath("/html/body/div[8]/div/div/div[2]/button")).click();
+	    
+	    //VGe.findElement(By.xpath("/html/body/div[8]/div/div/div[2]/button")).click();
 	    
 	    //To click Pay Later
 	    WebElement PayLater1=VGe.findElement(By.xpath("//*[@id=\"Paylater\"]"));
@@ -2413,279 +2437,165 @@ public class MemberMerge {
 	    TC++;
 	    Thread.sleep(7000);
 	    
+	    // 2 time booking--------------------------------------------------------------------------
 	    
-	    //---------------------- In Person - Payment  -----------------------------------
-	    
-	    
-			//To find doctor - click Book Appointment		
-		    WebElement FindDoc1i=VGe.findElement(By.xpath("//*[@id=\"profile-edit-lowermain\"]/div/div/div[1]/div[2]/ul/li[4]/a"));
-		    FindDoc1i.click();
-		    System.out.println("Test Case " +TC+ " : Book Appointment button is clicked  -Test Case Passed");
-		    TC++;
-		    Thread.sleep(TimeToSleep);	    
-	    
+	    //To find doctor - click Book Appointment		
+		WebElement FindDoc1i=VGe.findElement(By.xpath("//*[@id=\"profile-edit-lowermain\"]/div/div/div[1]/div[2]/ul/li[4]/a"));
+		FindDoc1i.click();
+		System.out.println("Test Case " +TC+ " : Book Appointment button is clicked  -Test Case Passed");
+		TC++;
+		Thread.sleep(TimeToSleep);	
+		    
+		    
 	    //To check the Doctor/Clinic name text box availability
-	    WebElement DocClinicName1ve = VGe.findElement(By.xpath("//*[@id=\"PName\"]"));
-	    DocClinicName1ve.sendKeys("USA Doctor");
+	    WebElement DocClinicName4 = VGe.findElement(By.xpath("//*[@id=\"PName\"]"));
+	    DocClinicName4.sendKeys("Amarvir");
 	    System.out.println("Test Case " +TC+ " : Doctor/clinic name is given  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(TimeToSleep);
 	    
 	    //To click on Search button
-	    WebElement SearchBtn2A = VGe.findElement(By.xpath(" //*[@id=\"btn-search\"]"));
-	    SearchBtn2A.click();
+	    WebElement SearchBtn9 = VGe.findElement(By.xpath(" //*[@id=\"btn-search\"]"));
+	    SearchBtn9.click();
 	    System.out.println("Test Case " +TC+ " : Search button is clicked  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(7000);
 	    
 	    
 	    //To check Doctor and book appointment
-	    WebElement BookNow1aA=VGe.findElement(By.xpath("(//a[@title=\"Book Now\"])[1]"));//                 
-	    BookNow1aA.click();
+	    WebElement BookNow4=VGe.findElement(By.xpath("(//a[@title=\"Book Now\"])[1]"));//                 
+	    BookNow4.click();
 	    System.out.println("Test Case " +TC+ " : Book now button is clicked  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(TimeToSleep);
-	    	
 	    
-	    
-	    //To select Tomorrow date
-	    WebElement TomorrowDate2=VGe.findElement(By.xpath("(//a[@class=\"currentday\"])[1]"));
-	    System.out.println("Test Case " +TC+ " : Selecting tomorrow date is clicked  -Test Case Passed");
-	    TomorrowDate2.click();
-	    TC++;
-	    Thread.sleep(TimeToSleep);	
-	    
-    
-	    //To select Evening Timings
-	    WebElement Time2v=VGe.findElement(By.xpath("(//a[@id=\"appointimeeven\"])[10]"));
-	    Time2v.click();
-	    System.out.println("Test Case " +TC+ " : Evening time is selected  -Test Case Passed");
+ 
+	    //To select Morning Timings
+	    WebElement Time4=VGe.findElement(By.xpath("(//a[@id=\"appointimeeven\"])[4]"));
+	    Time4.click();
+	    System.out.println("Test Case " +TC+ " : Morning time is selected  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(TimeToSleep);	
 	    
 	    //To provide Reason
-	    WebElement Reason1=VGe.findElement(By.xpath("//input[@id=\"reason\"]"));
-	    Reason1.sendKeys("Fever");
+	    WebElement Reason4=VGe.findElement(By.xpath("//input[@id=\"reason\"]"));
+	    Reason4.sendKeys("Neckpain");
 	    System.out.println("Test Case " +TC+ " : Reason is selected  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(TimeToSleep);	
 	    
 	    //To provide Age
-	    WebElement Age2=VGe.findElement(By.xpath("//input[@id=\"Age\"]"));
-	    Age2.clear();
-	    Age2.sendKeys("32");
+	    WebElement Age4=VGe.findElement(By.xpath("//input[@id=\"Age\"]"));
+	    Age4.clear();
+	    Age4.sendKeys("33");
 	    System.out.println("Test Case " +TC+ " : Age of other person is selected  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(TimeToSleep);	
 	    
 	    
 	    //To click Submit button
-	    WebElement Submit2=VGe.findElement(By.xpath("//*[@id=\"submit\"]"));
-	    Submit2.click();
+	    WebElement Submit4=VGe.findElement(By.xpath("//*[@id=\"submit\"]"));
+	    Submit4.click();
 	    System.out.println("Test Case " +TC+ " : Submit button is clicked  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(TimeToSleep);	
 	  
 	    //To accept Disclaimer
-	    WebElement Accept2=VGe.findElement(By.xpath("//*[@id=\"i-accept-disclaimer\"]"));
-	    Accept2.click();
+	    WebElement Accept4=VGe.findElement(By.xpath("//*[@id=\"i-accept-disclaimer\"]"));
+	    Accept4.click();
 	    System.out.println("Test Case " +TC+ " : Disclaimer is selected  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(TimeToSleep);	
 	    
-	    //Weekend popup			/html/body/div[8]/div/div/div[2]/button			///html/body/div[8]/div/div/div[1]/button
-	    //VGe.switchTo().alert().accept();
+	    //Weekend popup			/html/body/div[8]/div/div/div[2]/button			
+	    //VGe.findElement(By.xpath("/html/body/div[8]/div/div/div[2]/button")).click();
 	    
-	    //To click Make Payment  /html/body/div[8]/div/div/div[2]/button
-	    VGe.findElement(By.xpath("/html/body/div[8]/div/div/div[2]/button")).click();
-	    WebElement Payment1=VGe.findElement(By.xpath("//*[@id=\"AppointmentForm\"]/div/div/div/div[1]/div/table/tbody/tr[8]/td/div/input[2]"));
-	    Payment1.click();
-	    System.out.println("Test Case " +TC+ " : Make Payment is Clicked  -Test Case Passed");
-	    TC++;
-	    Thread.sleep(TimeToSleep);	
-    
-	    
-	    //To put card number
-	    WebElement Payment1c=VGe.findElement(By.xpath("//*[@id=\"cardNumber\"]"));
-	    Payment1c.click();
-	    Payment1c.sendKeys("4111 1111 1111 1111");
-	    System.out.println("Test Case " +TC+ " : Card Number is Filled  -Test Case Passed");
-	    TC++;
-	    Thread.sleep(TimeToSleep);
-	    
-	    //To put card expiry date
-	    WebElement Payment1e=VGe.findElement(By.xpath("//*[@id=\"cardExpiry\"]"));
-	    Payment1e.click();
-	    Payment1e.sendKeys("09 / 29");
-	    System.out.println("Test Case " +TC+ " : Card Expiry Date is Filled  -Test Case Passed");
-	    TC++;
-	    Thread.sleep(TimeToSleep);
-	    
-	    //To put card cvc
-	    WebElement Payment1cvc=VGe.findElement(By.xpath("//*[@id=\"cardCvc\"]"));
-	    Payment1cvc.click();
-	    Payment1cvc.sendKeys("559");
-	    System.out.println("Test Case " +TC+ " : CVC is Filled  -Test Case Passed");
-	    TC++;
-	    Thread.sleep(TimeToSleep);
-	    
-	    //To put card holder name
-	    WebElement Payment1HN=VGe.findElement(By.xpath("//*[@id=\"billingName\"]"));
-	    Payment1HN.click();
-	    Payment1HN.sendKeys("USA Member Anuprerna");
-	    System.out.println("Test Case " +TC+ " : Card holder name is Filled  -Test Case Passed");
-	    TC++;
-	    Thread.sleep(TimeToSleep);
-	       		
-	    //To click pay button
-	    WebElement Payment1p=VGe.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[2]/main/div/form/div[1]/div/div/div[3]/div/div[3]/button/div[3]"));
-	    Payment1p.click();
-	    
-	    System.out.println("Test Case " +TC+ " : Pay on Razorpay is Clicked  -Test Case Passed");
+	    //To click Pay Later
+	    WebElement PayLater4=VGe.findElement(By.xpath("//*[@id=\"Paylater\"]"));
+	    PayLater4.click();
+	    System.out.println("Test Case " +TC+ " : Pay Later is selected  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(7000);
+
+	    // 3 time booking--------------------------------------------------------------------------
 	    
-	  //To find doctor - click Book Appointment		
-	    WebElement FindDoc1iv=VGe.findElement(By.xpath("//*[@id=\"profile-edit-lowermain\"]/div/div/div[1]/div[2]/ul/li[4]/a"));
-	    FindDoc1iv.click();
-	    System.out.println("Test Case " +TC+ " : Book Appointment button is clicked  -Test Case Passed");
-	    TC++;
-	    Thread.sleep(TimeToSleep);
-	    
-	    
+	    //To find doctor - click Book Appointment		
+		WebElement FindDoc8=VGe.findElement(By.xpath("//*[@id=\"profile-edit-lowermain\"]/div/div/div[1]/div[2]/ul/li[4]/a"));
+		FindDoc8.click();
+		System.out.println("Test Case " +TC+ " : Book Appointment button is clicked  -Test Case Passed");
+		TC++;
+		Thread.sleep(TimeToSleep);	
+		    
+		    
 	    //To check the Doctor/Clinic name text box availability
-	    WebElement DocClinicName1av = VGe.findElement(By.xpath("//*[@id=\"PName\"]"));
-	    DocClinicName1av.sendKeys("USA Doctor");
+	    WebElement DocClinicName8 = VGe.findElement(By.xpath("//*[@id=\"PName\"]"));
+	    DocClinicName8.sendKeys("Amarvir");
 	    System.out.println("Test Case " +TC+ " : Doctor/clinic name is given  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(TimeToSleep);
 	    
 	    //To click on Search button
-	    WebElement SearchBtn2av = VGe.findElement(By.xpath(" //*[@id=\"btn-search\"]"));
-	    SearchBtn2av.click();
+	    WebElement SearchBtn8c = VGe.findElement(By.xpath(" //*[@id=\"btn-search\"]"));
+	    SearchBtn8c.click();
 	    System.out.println("Test Case " +TC+ " : Search button is clicked  -Test Case Passed");
 	    TC++;
-	    Thread.sleep(10000);
+	    Thread.sleep(7000);
 	    
-	    //To check Doctor book appointment button
-	    WebElement BookNow1av=VGe.findElement(By.xpath("(//a[@title=\"Book Now\"])[1]"));//                 
-	    BookNow1av.click();
-	    System.out.println("Test Case " +TC+ ": Book now button is clicked  -Test Case Passed");
-	    TC++;
-	    Thread.sleep(TimeToSleep);	
 	    
-	    //To select Tomorrow date
-	    WebElement TomorrowNextDate3=VGe.findElement(By.xpath("(//a[@class=\"currentday\"])[3]"));
-	    TomorrowNextDate3.click();
-	    System.out.println("Test Case " +TC+ " : Selecting day-after-tomorrow date is clicked  -Test Case Passed");
+	    //To check Doctor and book appointment
+	    WebElement BookNow8=VGe.findElement(By.xpath("(//a[@title=\"Book Now\"])[1]"));//                 
+	    BookNow8.click();
+	    System.out.println("Test Case " +TC+ " : Book now button is clicked  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(TimeToSleep);
 	    
-	    //To select Evening Timings
-	    WebElement Time2a=VGe.findElement(By.xpath("(//a[@id=\"appointimeeven\"])[2]"));
-	    Time2a.click();
+ 
+	    //To select Morning Timings
+	    WebElement Time8=VGe.findElement(By.xpath("(//a[@id=\"appointimeeven\"])[16]"));
+	    Time8.click();
 	    System.out.println("Test Case " +TC+ " : Evening time is selected  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(TimeToSleep);	
 	    
-	    //To check timings are visible 
-	    WebElement Timeing3=VGe.findElement(By.xpath("//h3[@id=\"doctor-current-time\"]"));
-	    String Timeing3v=Timeing3.getText();
-	    System.out.println("Test Case " +TC+ " : Timing is available  -Test Case Passed -"+Timeing3v);
-	    TC++;
-	    Thread.sleep(TimeToSleep);	
-	    
-	    
-	    //To select V-Call button
-	    WebElement VCallBtn3=VGe.findElement(By.xpath("(//label[@class=\"video-call-btn\"])[1]"));
-	    VCallBtn3.click();
-	    System.out.println("Test Case " +TC+ " : VCall radio-button is selected  -Test Case Passed");
-	    TC++;
-	    Thread.sleep(TimeToSleep);	
-	    
-	    
-	  //To provide Reason
-	    WebElement Reason3=VGe.findElement(By.xpath("//input[@id=\"reason\"]"));
-	    Reason3.sendKeys("Fever");
+	    //To provide Reason
+	    WebElement Reason8=VGe.findElement(By.xpath("//input[@id=\"reason\"]"));
+	    Reason8.sendKeys("Neckpain");
 	    System.out.println("Test Case " +TC+ " : Reason is selected  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(TimeToSleep);	
 	    
 	    //To provide Age
-	    WebElement Age3=VGe.findElement(By.xpath("//input[@id=\"Age\"]"));
-	    Age3.clear();
-	    Age3.sendKeys("32");
+	    WebElement Age8=VGe.findElement(By.xpath("//input[@id=\"Age\"]"));
+	    Age8.clear();
+	    Age8.sendKeys("44");
 	    System.out.println("Test Case " +TC+ " : Age of other person is selected  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(TimeToSleep);	
 	    
 	    
 	    //To click Submit button
-	    WebElement Submit3=VGe.findElement(By.xpath("//*[@id=\"submit\"]"));
-	    Submit3.click();
+	    WebElement Submit8=VGe.findElement(By.xpath("//*[@id=\"submit\"]"));
+	    Submit8.click();
 	    System.out.println("Test Case " +TC+ " : Submit button is clicked  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(TimeToSleep);	
 	  
 	    //To accept Disclaimer
-	    WebElement Accept3=VGe.findElement(By.xpath("//*[@id=\"i-accept-disclaimer\"]"));
-	    Accept3.click();
+	    WebElement Accept8=VGe.findElement(By.xpath("//*[@id=\"i-accept-disclaimer\"]"));
+	    Accept8.click();
 	    System.out.println("Test Case " +TC+ " : Disclaimer is selected  -Test Case Passed");
 	    TC++;
 	    Thread.sleep(TimeToSleep);	
 	    
-	    //Weekend popup			/html/body/div[8]/div/div/div[2]/button			///html/body/div[8]/div/div/div[1]/button
-	    //VGe.switchTo().alert().accept();
+	    //Weekend popup			/html/body/div[8]/div/div/div[2]/button			
+	    //VGe.findElement(By.xpath("/html/body/div[8]/div/div/div[2]/button")).click();
 	    
-	    //To click Make Payment
-	    VGe.findElement(By.xpath("/html/body/div[8]/div/div/div[2]/button")).click();
-	    WebElement Payment3=VGe.findElement(By.xpath("//*[@id=\"AppointmentForm\"]/div/div/div/div[1]/div/table/tbody/tr[8]/td/div/input[2]"));
-	    Payment3.click();
-	    System.out.println("Test Case " +TC+ " : Make Payment is Clicked  -Test Case Passed");
+	    //To click Pay Later
+	    WebElement PayLater8=VGe.findElement(By.xpath("//*[@id=\"Paylater\"]"));
+	    PayLater8.click();
+	    System.out.println("Test Case " +TC+ " : Pay Later is selected  -Test Case Passed");
 	    TC++;
-	    Thread.sleep(TimeToSleep);	
-    
-	    
-	    //To put card number
-	    WebElement Payment3c=VGe.findElement(By.xpath("//*[@id=\"cardNumber\"]"));
-	    Payment3c.click();
-	    Payment3c.sendKeys("4111 1111 1111 1111");
-	    System.out.println("Test Case " +TC+ " : Card Number is Filled  -Test Case Passed");
-	    TC++;
-	    Thread.sleep(TimeToSleep);
-	    
-	    //To put card expiry date
-	    WebElement Payment3e=VGe.findElement(By.xpath("//*[@id=\"cardExpiry\"]"));
-	    Payment3e.click();
-	    Payment3e.sendKeys("09 / 29");
-	    System.out.println("Test Case " +TC+ " : Card Expiry Date is Filled  -Test Case Passed");
-	    TC++;
-	    Thread.sleep(TimeToSleep);
-	    
-	    //To put card cvc
-	    WebElement Payment3cvc=VGe.findElement(By.xpath("//*[@id=\"cardCvc\"]"));
-	    Payment3cvc.click();
-	    Payment3cvc.sendKeys("559");
-	    System.out.println("Test Case " +TC+ " : CVC is Filled  -Test Case Passed");
-	    TC++;
-	    Thread.sleep(TimeToSleep);
-	    
-	    //To put card holder name
-	    WebElement Payment3HN=VGe.findElement(By.xpath("//*[@id=\"billingName\"]"));
-	    Payment3HN.click();
-	    Payment3HN.sendKeys("USA Member Anuprerna");
-	    System.out.println("Test Case " +TC+ " : Card holder name is Filled  -Test Case Passed");
-	    TC++;
-	    Thread.sleep(TimeToSleep);
-	       		
-	    //To click pay button
-	    WebElement Payment3p=VGe.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[2]/main/div/form/div[1]/div/div/div[3]/div/div[3]/button/div[3]"));
-	    Payment3p.click();
-	    
-	    System.out.println("Test Case " +TC+ " : Pay on Razorpay is Clicked  -Test Case Passed");
-	    TC++;
-	    Thread.sleep(10000);
-
+	    Thread.sleep(7000);
 	    /*
 	     * 
 	     * 
@@ -2876,7 +2786,7 @@ public class MemberMerge {
 	    Thread.sleep(TimeToSleep);
 	    
 	    //Confirmed-Date and time								
-	    WebElement ConfirmedDateTime2=VGe.findElement(By.xpath("//*[@id=\"applistcnf\"]/div/div[1]/div/div/div[2]/div[2]/h6"));
+	    WebElement ConfirmedDateTime2=VGe.findElement(By.xpath("//*[@id=\"applistcnf\"]/div/div[1]/div/div/div[1]/div[2]/h6"));
 	    String ConfirmedDateTime12=ConfirmedDateTime2.getText();
 	  	//Thread.sleep(1000);																																											
 	  	System.out.println("Test Case " +TC+ " : Date & Time of patient's appointment is available  -Test Case Passed "+ConfirmedDateTime12);
@@ -2884,7 +2794,7 @@ public class MemberMerge {
 	    Thread.sleep(TimeToSleep);
 	    
 	    //Confirmed - Age 
-	    WebElement ConfirmedAge2=VGe.findElement(By.xpath("//*[@id=\"applistcnf\"]/div/div[1]/div/div/div[2]/div[5]/h6"));
+	    WebElement ConfirmedAge2=VGe.findElement(By.xpath("//*[@id=\"applistcnf\"]/div/div[1]/div/div/div[1]/div[5]/h6"));
 	    String ConfirmedAge12=ConfirmedAge2.getText();
 	  	//Thread.sleep(1000);																																											
 	  	System.out.println("Test Case " +TC+ " : Age of patient is available  -Test Case Passed "+ConfirmedAge12);
@@ -2892,7 +2802,7 @@ public class MemberMerge {
 	    Thread.sleep(TimeToSleep);
 	    
 	    //Confirmed - Reason 
-	    WebElement ConfirmedReason2=VGe.findElement(By.xpath("//*[@id=\"applistcnf\"]/div/div[1]/div/div/div[2]/div[4]/h6"));
+	    WebElement ConfirmedReason2=VGe.findElement(By.xpath("//*[@id=\"applistcnf\"]/div/div[1]/div/div/div[1]/div[4]/h6"));
 	    String ConfirmedReason12=ConfirmedReason2.getText();
 	  	//Thread.sleep(1000);																																											
 	  	System.out.println("Test Case " +TC+ " : Reason of patient's appointment is available  -Test Case Passed "+ConfirmedReason12);
@@ -2900,7 +2810,7 @@ public class MemberMerge {
 	    Thread.sleep(TimeToSleep);
 	    
 	    //type of appointment on Cancelled- In-Person/vcall
-	    WebElement ConfirmedType2=VGe.findElement(By.xpath("//*[@id=\"applistcnf\"]/div/div[1]/div/div/div[2]/div[6]/h6"));
+	    WebElement ConfirmedType2=VGe.findElement(By.xpath("//*[@id=\"applistcnf\"]/div/div[1]/div/div/div[1]/div[6]/h6"));
 	    String ConfirmedType12=ConfirmedType2.getText();
 	  	//Thread.sleep(1000);																																											
 	  	System.out.println("Test Case " +TC+ " : Type of patient's appointment is available  -Test Case Passed "+ConfirmedType12);
@@ -3031,7 +2941,7 @@ public class MemberMerge {
 	  	Thread.sleep(TimeToSleep);
 	  	
 	  	//Cancel button is clicked
-	  	VGe.findElement(By.xpath("//*[@id=\"applistcnf\"]/div/div[1]/div/div/div[3]/div/div/div[5]/a")).click();
+	  	VGe.findElement(By.xpath("//*[@id=\"applistcnf\"]/div/div[1]/div/div/div[2]/div/div/div[5]/a")).click();
 	  	System.out.println("Test Case " +TC+ " :  Cancel button is clicked  -Test Case Passed ");
 	  	TC++;
 	  	Thread.sleep(TimeToSleep);
@@ -3055,8 +2965,8 @@ public class MemberMerge {
 	    
 	    //see map button 		
 	  	//VGe.findElement(By.xpath("(//span[@class=\"lmseebutton-text\"])[2]")).click();
-	  	System.out.println("Test Case " +TC+ " :  See Map button is clicked  -Test Case Passed ");
-	  	TC++;
+	  	//System.out.println("Test Case " +TC+ " :  See Map button is clicked  -Test Case Passed ");
+	  	//TC++;
 	  	Thread.sleep(TimeToSleep);
 	  	
 	  	//To go to Complete appointment in manage appointment
@@ -3234,7 +3144,18 @@ public class MemberMerge {
 	  	//Thread.sleep(1000);																																											
 	  	System.out.println("Test Case " +TC+ " : Menu in Cancelled Apppointment is clicked  -Test Case Passed ");
 	  	TC++;
-	  	Thread.sleep(TimeToSleep);		   
+	  	Thread.sleep(TimeToSleep);
 	}
+
+
+@BeforeMethod
+public void beforeMethod() {
+System.out.println("Starting Test On Chrome Browser");
+}
+
+@AfterMethod
+ public void afterMethod() {
+ System.out.println("Finished Test On Chrome Browser");
+}
 
 }

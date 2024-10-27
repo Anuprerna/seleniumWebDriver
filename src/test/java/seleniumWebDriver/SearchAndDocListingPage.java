@@ -141,7 +141,7 @@ public class SearchAndDocListingPage {
 		    Thread.sleep(5000);
 		    
 		    //To check the count of lemniska provider statement on the page
-		    WebElement Heading4=VG.findElement(By.xpath("//*[@id=\"doctorcount\"]/div/h4"));
+		    WebElement Heading4=VG.findElement(By.xpath("//*[@id=\"doctorcount\"]/p"));
 		    System.out.println(Heading4.getText());
 		    System.out.println("Test Case 18 : No Record Found is visible on the page  -Test Case Passed");
 		    Thread.sleep(5000);	
@@ -218,7 +218,7 @@ public class SearchAndDocListingPage {
 		    Thread.sleep(5000);
 		    
 		    //To check the count of lemniska provider statement on the page
-		    WebElement Heading6=VG.findElement(By.xpath("//*[@id=\"doctorcount\"]/div/h4"));
+		    WebElement Heading6=VG.findElement(By.xpath("//*[@id=\"doctorcount\"]/p"));
 		    System.out.println(Heading6.getText());
 		    System.out.println("Test Case 29 : No Record Found is visible on the page  -Test Case Passed");
 		    
@@ -482,6 +482,7 @@ public class SearchAndDocListingPage {
 		    Thread.sleep(5000);
 		    
 		    System.out.println("Test Case Complete");
+		    
 		  }
 	
 }
