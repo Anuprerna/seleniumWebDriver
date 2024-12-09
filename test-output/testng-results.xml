@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-26T09:58:12 IST" name="Default suite" finished-at="2024-11-26T10:42:28 IST" duration-ms="2655566">
+    <groups>
+    </groups>
+    <test started-at="2024-11-26T09:58:12 IST" name="Default test" finished-at="2024-11-26T10:42:28 IST" duration-ms="2655566">
+      <class name="ReportGenerate1.Test_Member">
+        <test-method is-config="true" signature="test_MemberSignUpStart()[pri:0, instance:ReportGenerate1.Test_Member@5aa9e4eb]" started-at="2024-11-26T09:58:12 IST" name="test_MemberSignUpStart" finished-at="2024-11-26T09:58:12 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_MemberSignUpStart -->
+        <test-method signature="test_MemberSignUp()[pri:1, instance:ReportGenerate1.Test_Member@5aa9e4eb]" started-at="2024-11-26T09:58:12 IST" name="test_MemberSignUp" finished-at="2024-11-26T09:59:37 IST" duration-ms="84807" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_MemberSignUp -->
+        <test-method signature="test_GetStartedPage()[pri:2, instance:ReportGenerate1.Test_Member@5aa9e4eb]" started-at="2024-11-26T09:59:37 IST" name="test_GetStartedPage" finished-at="2024-11-26T10:03:37 IST" duration-ms="240220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_GetStartedPage -->
+        <test-method signature="test_ContactUsandFaq()[pri:3, instance:ReportGenerate1.Test_Member@5aa9e4eb]" started-at="2024-11-26T10:03:37 IST" name="test_ContactUsandFaq" finished-at="2024-11-26T10:11:19 IST" duration-ms="462276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_ContactUsandFaq -->
+        <test-method signature="test_EditProfile()[pri:4, instance:ReportGenerate1.Test_Member@5aa9e4eb]" started-at="2024-11-26T10:11:19 IST" name="test_EditProfile" finished-at="2024-11-26T10:14:02 IST" duration-ms="162067" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_EditProfile -->
+        <test-method signature="test_SearchAndDocListing()[pri:5, instance:ReportGenerate1.Test_Member@5aa9e4eb]" started-at="2024-11-26T10:14:02 IST" name="test_SearchAndDocListing" finished-at="2024-11-26T10:24:06 IST" duration-ms="604125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_SearchAndDocListing -->
+        <test-method signature="test_DoctorSignUp()[pri:6, instance:ReportGenerate1.Test_Member@5aa9e4eb]" started-at="2024-11-26T10:24:06 IST" name="test_DoctorSignUp" finished-at="2024-11-26T10:33:08 IST" duration-ms="542173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_DoctorSignUp -->
+        <test-method signature="test_DoctorEditProfile()[pri:7, instance:ReportGenerate1.Test_Member@5aa9e4eb]" started-at="2024-11-26T10:33:08 IST" name="test_DoctorEditProfile" finished-at="2024-11-26T10:37:17 IST" duration-ms="248745" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_DoctorEditProfile -->
+        <test-method signature="test_ManageAppointmentMember()[pri:8, instance:ReportGenerate1.Test_Member@5aa9e4eb]" started-at="2024-11-26T10:37:17 IST" name="test_ManageAppointmentMember" finished-at="2024-11-26T10:42:27 IST" duration-ms="310655" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_ManageAppointmentMember -->
+        <test-method is-config="true" signature="test_MemberEnd()[pri:0, instance:ReportGenerate1.Test_Member@5aa9e4eb]" started-at="2024-11-26T10:42:28 IST" name="test_MemberEnd" finished-at="2024-11-26T10:42:28 IST" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_MemberEnd -->
+      </class> <!-- ReportGenerate1.Test_Member -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
