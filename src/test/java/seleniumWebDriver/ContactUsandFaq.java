@@ -197,7 +197,7 @@ public class ContactUsandFaq {
 
 		// to enter the FAQ's
 
-		WebElement FAQfooter = driver.findElement(By.xpath("//a[contains(text(),\"Faq's\")]"));
+		WebElement FAQfooter = driver.findElement(By.xpath("(//a[@href=\"/faqs\"])[2]"));
 		if (FAQfooter.isEnabled()) {
 			System.out.println("Test Case 24 :FAQ icon is present -Test Case Passed");
 		} else {
@@ -576,7 +576,7 @@ public class ContactUsandFaq {
 		// Dropdown is selected
 
 		// go to the footer FAQ again
-		driver.findElement(By.xpath("//a[contains(text(),\"Faq's\")]")).click();
+		driver.findElement(By.xpath("(//a[@href=\\\"/faqs\\\"])[2]")).click();
 		Thread.sleep(2000);
 		System.out.println("Test case 69 : FAQ icon is selected-Test case passed");
 		System.out.println("Test Configuration : D-  Contact and FAQ Module is working as expected on chrome");

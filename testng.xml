@@ -3,8 +3,8 @@
 <suite name="LemniskaTestNGSuite">
   <test thread-count="5" name="LemniskaTestNGTest">
     <classes>
-      <class name="ReportGenerate1.DoctorMergeTestngReport"/>
-      <class name="seleniumWebDriver.LiveMemberMerge"/>
+      <class name="ReportGenerate1.DoctorMergeTestngReport"/></class>
+      <class name="ReportGenerate1.Test_Member"/></class>
     </classes>
   </test> <!-- LemniskaTestNGTest -->
 </suite> <!-- LemniskaTestNGSuite -->

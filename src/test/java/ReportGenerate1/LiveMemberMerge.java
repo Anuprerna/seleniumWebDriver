@@ -1,4 +1,4 @@
-package seleniumWebDriver;
+package ReportGenerate1;
 
 import java.util.ArrayList;
 
@@ -70,7 +70,7 @@ import java.util.Scanner;
 
 public class LiveMemberMerge {
 	@Test
-	public void a()   throws InterruptedException  {
+	public static void main(String[] args)   throws InterruptedException  {
 		// TODO Auto-generated method stub
 		
 		/*--------------------------------------------------------------------------------------------------------------

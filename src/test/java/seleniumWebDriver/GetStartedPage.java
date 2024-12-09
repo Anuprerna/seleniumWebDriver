@@ -165,8 +165,7 @@ public class GetStartedPage {
 		System.out.println("Test Case 13 :Title is "+HowitworksTitle);			
 					
 					
-		//URl validate 			
-//			QA URL		
+		//URl validate 					
 		String HowitworksURL=VG.getCurrentUrl();			
 		Assert.assertEquals(HowitworksURL, "https://lemniska.com/how-it-works");			
 		System.out.println("Test Case 14 : Assert is working");			

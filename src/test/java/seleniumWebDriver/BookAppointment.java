@@ -28,8 +28,8 @@ public class BookAppointment {
 	public static void main(String[] args) throws InterruptedException {
 			
 			String WebsiteLink="https://qa.lemniska.com/";
-			String User="usa_member@yopmail.com";	
-			String Passwrd="usa_member1@"; 	
+			String User="priya00@yopmail.com";//"usa_member@yopmail.com";	
+			String Passwrd="Priya@6767";//"usa_member1@"; 	
 			int TimeToSleep=2000,TC=1;
 			
 			
@@ -121,14 +121,14 @@ public class BookAppointment {
 		    
 		    //---------------------- V Call - Insurance  -----------------------------------
 		    //To check Doctor and book appointment
-		    WebElement BookNow1a=VG.findElement(By.xpath("(//a[@title=\"Book Now\"])[1]"));//                 
+		    WebElement BookNow1a=VG.findElement(By.xpath("(//a[@title=\"Book Now\"])[2]"));//                 
 		    BookNow1a.click();
 		    System.out.println("Test Case " +TC+ " : Book now button is clicked  -Test Case Passed");
 		    TC++;
 		    Thread.sleep(TimeToSleep);
 		    
 		    //To select Tomorrow date
-		    WebElement TomorrowNextDate1v=VG.findElement(By.xpath("(//a[@class=\"currentday\"])[2]"));
+		    WebElement TomorrowNextDate1v=VG.findElement(By.xpath("(//a[@class=\"currentday\"])[1]"));
 		    TomorrowNextDate1v.click();
 		    System.out.println("Test Case " +TC+ " : Selecting day-after-tomorrow date is clicked  -Test Case Passed");
 		    TC++;
@@ -197,7 +197,7 @@ public class BookAppointment {
 		    Thread.sleep(TimeToSleep);	
 		    
 		    //To select Specific Insurance Category
-		    WebElement InsuranceValb=VG.findElement(By.xpath("//*[@id=\"ProvidersPlans_1\"]/div/ul/li[2]/a"));
+		    WebElement InsuranceValb=VG.findElement(By.xpath("//*[@id=\"ProvidersPlans_278\"]/div/ul/li[1]/a"));
 		    InsuranceValb.click();
 		    System.out.println("Test Case " +TC+ " : Specific Insurance Category is clicked  -Test Case Passed");
 		    TC++;
@@ -241,9 +241,10 @@ public class BookAppointment {
 		    TC++;
 		    Thread.sleep(TimeToSleep);	
 		    
+		    VG.findElement(By.xpath("/html/body/div[8]/div/div/div[2]/button")).click();
 		    
 		    //To confirm on Appointment details		
-		    WebElement Accept1c=VG.findElement(By.xpath("//input[@class=\"btn bg-vg1 text-white mp btn-disable\"]"));
+		    WebElement Accept1c=VG.	findElement(By.xpath("//input[@class=\"btn bg-vg1 text-white mp btn-disable\"]"));
 		    Accept1c.click();
 		    System.out.println("Test Case " +TC+ " : Confirm on Appointment details	page is Clicked  -Test Case Passed");
 		    TC++;
@@ -308,7 +309,7 @@ public class BookAppointment {
 		    
 	    
 		    //To select Morning Timings
-		    WebElement Time1=VG.findElement(By.xpath("(//a[@id=\"appointimeeven\"])[3]"));
+		    WebElement Time1=VG.findElement(By.xpath("(//a[@id=\"appointimeeven\"])[4]"));
 		    Time1.click();
 		    System.out.println("Test Case " +TC+ " : Morning time is selected  -Test Case Passed");
 		    TC++;
@@ -323,7 +324,7 @@ public class BookAppointment {
 		    
 		    //To provide Age
 		    WebElement Age1i=VG.findElement(By.xpath("//input[@id=\"Age\"]"));
-		    Age1i.sendKeys("22");
+		    Age1i.sendKeys("32");
 		    System.out.println("Test Case " +TC+ " : Age of other person is selected  -Test Case Passed");
 		    TC++;
 		    Thread.sleep(TimeToSleep);	
@@ -391,7 +392,7 @@ public class BookAppointment {
 		    
 	    
 		    //To select Evening Timings
-		    WebElement Time2=VG.findElement(By.xpath("(//a[@id=\"appointimeeven\"])[15]"));
+		    WebElement Time2=VG.findElement(By.xpath("(//a[@id=\"appointimeeven\"])[17]"));
 		    Time2.click();
 		    System.out.println("Test Case " +TC+ " : Evening time is selected  -Test Case Passed");
 		    TC++;
@@ -471,7 +472,7 @@ public class BookAppointment {
 		    Thread.sleep(TimeToSleep);
 		       		
 		    //To click pay button
-		    WebElement Payment1p=VG.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[2]/main/div/form/div[1]/div/div/div[3]/div/div[2]/button/div[3]"));
+		    WebElement Payment1p=VG.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[2]/main/div/form/div[1]/div/div/div[3]/div/div[3]/button/div[3]"));
 		    Payment1p.click();
 		    
 		    System.out.println("Test Case " +TC+ " : Pay on Razorpay is Clicked  -Test Case Passed");

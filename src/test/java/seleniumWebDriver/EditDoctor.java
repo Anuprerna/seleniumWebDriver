@@ -467,14 +467,16 @@ public class EditDoctor {
 	    frame2.sendKeys("C:\\Users\\Anuprerna\\Desktop\\A2.jpeg");	
 	    
 	    VG.findElement(By.xpath("//*[@id=\"btn_Register\"]")).click();                               
-	    Thread.sleep(5000);  
-	    VG.findElement(By.cssSelector("body.modal-open:nth-child(2) div.bootbox.modal.fade.bootbox-confirm.show:nth-child(43) div.modal-dialog div.modal-content div.modal-footer > button.btn.bg-green.text-white.bootbox-accept:nth-child(2)")).click();  
+	    //Thread.sleep(5000);  
+	    //VG.findElement(By.cssSelector("body.modal-open:nth-child(2) div.bootbox.modal.fade.bootbox-confirm.show:nth-child(43) div.modal-dialog div.modal-content div.modal-footer > button.btn.bg-green.text-white.bootbox-accept:nth-child(2)")).click();  
 	    Thread.sleep(5000);
 	    
 		System.out.println("Test Case " +TC+ " : Save button is clicked - Test Case Passed");
 		Thread.sleep(5000);
 		TC++;
-		
+		VG.findElement(By.xpath("/html/body/div[11]/div/div/div[2]/button[2]")).click();
+		Thread.sleep(5000);
+		TC++;
 		System.out.println("Test Case " +TC+ " : Success run is visible - Test Case Passed");
 	  
 	}

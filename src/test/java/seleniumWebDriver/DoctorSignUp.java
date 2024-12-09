@@ -24,7 +24,7 @@ import org.testng.Assert;
 			Thread.sleep(5000);														
 												
 			// To click on get started 														
-			WebElement GetStartedNow=driver.findElement(By.xpath("//body/div[7]/div[1]/div[1]/div[1]/main[1]/section[1]/div[1]/div[1]/div[1]/a[1]"));												
+			WebElement GetStartedNow=driver.findElement(By.xpath("//*[@id=\"lower-main-contain\"]/main/section[1]/div/div[1]/div/a"));												
 			if(GetStartedNow.isEnabled()) {												
 			System.out.println("Test Case 00A : Get started icon is present -Test Case Passed");											
 			}												
@@ -45,7 +45,7 @@ import org.testng.Assert;
 			//////////////////									
 			driver.findElement(By.xpath("//button[@id='dropdownMenuButton']")).click();														
 			Thread.sleep(2000);														
-			driver.findElement(By.xpath("//header/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/a[2]")).click();														
+			driver.findElement(By.xpath("//*[@id=\"header-right-button\"]/div[2]/div[2]/div/div/div[2]/div[2]/a[2]")).click();														
 			Thread.sleep(8000);														
 			System.out.println("Test case 1 : Doctor sign up link is clicked");														
 			//String DoctorSignuptitle=driver.findElement(By.xpath("//h2[contains(text(),'Doctor Sign Up')]")).getText();	
@@ -79,7 +79,7 @@ import org.testng.Assert;
 			Thread.sleep(2000);														
 			Email.clear();														
 			Thread.sleep(2500);														
-			Email.sendKeys("anu_USA1@yopmail.com");														
+			Email.sendKeys("anu_USA1z@yopmail.com");														
 			System.out.println("Test case 6 : Random and Correct Keys are added to Email");			
 			
 			
@@ -297,7 +297,7 @@ import org.testng.Assert;
 			Thread.sleep(5000);														
 												
 			// To click on get started 														
-			WebElement GetStartedNow1=driver.findElement(By.xpath("//body/div[7]/div[1]/div[1]/div[1]/main[1]/section[1]/div[1]/div[1]/div[1]/a[1]"));												
+			WebElement GetStartedNow1=driver.findElement(By.xpath("//*[@id=\"lower-main-contain\"]/main/section[1]/div/div[1]/div/a"));											
 			if(GetStartedNow1.isEnabled()) {												
 			System.out.println("Test Case 00A : Get started icon is present -Test Case Passed");											
 			}												
@@ -318,7 +318,7 @@ import org.testng.Assert;
 			//////////////////									
 			driver.findElement(By.xpath("//button[@id='dropdownMenuButton']")).click();														
 			Thread.sleep(2000);														
-			driver.findElement(By.xpath("//header/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/a[2]")).click();														
+			driver.findElement(By.xpath("//*[@id=\"header-right-button\"]/div[2]/div[2]/div/div/div[2]/div[2]/a[2]")).click();														
 			Thread.sleep(8000);														
 			System.out.println("Test case 1 : Doctor sign up link is clicked");														
 			//String DoctorSignuptitle=driver.findElement(By.xpath("//h2[contains(text(),'Doctor Sign Up')]")).getText();	
@@ -360,7 +360,7 @@ import org.testng.Assert;
 			Thread.sleep(2000);														
 			Email1.clear();														
 			Thread.sleep(2500);														
-			Email1.sendKeys("anu_India1@yopmail.com");														
+			Email1.sendKeys("anu_India1z@yopmail.com");														
 			System.out.println("Test case 6 : Random and Correct Keys are added to Email");			
 			
 			
@@ -596,7 +596,7 @@ import org.testng.Assert;
 			Thread.sleep(5000);														
 												
 			// To click on get started 														
-			WebElement GetStartedNow4=driver.findElement(By.xpath("//body/div[7]/div[1]/div[1]/div[1]/main[1]/section[1]/div[1]/div[1]/div[1]/a[1]"));												
+			WebElement GetStartedNow4=driver.findElement(By.xpath("//*[@id=\"lower-main-contain\"]/main/section[1]/div/div[1]/div/a"));											
 			if(GetStartedNow4.isEnabled()) {												
 			System.out.println("Test Case 00A : Get started icon is present -Test Case Passed");											
 			}												
@@ -617,7 +617,7 @@ import org.testng.Assert;
 			//////////////////									
 			driver.findElement(By.xpath("//button[@id='dropdownMenuButton']")).click();														
 			Thread.sleep(2000);														
-			driver.findElement(By.xpath("//header/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/a[2]")).click();														
+			driver.findElement(By.xpath("//*[@id=\"header-right-button\"]/div[2]/div[2]/div/div/div[2]/div[2]/a[2]")).click();														
 			Thread.sleep(8000);														
 			System.out.println("Test case 1 : Doctor sign up link is clicked");														
 			//String DoctorSignuptitle=driver.findElement(By.xpath("//h2[contains(text(),'Doctor Sign Up')]")).getText();	
@@ -659,7 +659,7 @@ import org.testng.Assert;
 			Thread.sleep(2000);														
 			Email4.clear();														
 			Thread.sleep(2500);														
-			Email4.sendKeys("anu_MexicoEnglish@yopmail.com");														
+			Email4.sendKeys("anu_MexicoEnglishz@yopmail.com");														
 			System.out.println("Test case 6 : Random and Correct Keys are added to Email");			
 			
 			
@@ -723,7 +723,7 @@ import org.testng.Assert;
 			
 			//driver.get("https://qa.lemniska.com/pricing/Quarterly/bebc0e48-a09d-4a49-aed9-72d6fe753439");
 			
-			String Plantitlepage4=driver.findElement(By.xpath("/html[1]/body[1]/div[7]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/h2[1]")).getText();
+			String Plantitlepage4=driver.findElement(By.xpath("//*[@id=\"lower-main-contain\"]/section/div/div/div[3]/div/div/h2")).getText();
             Assert.assertEquals(Plantitlepage4, "Simple pricing that scales with your business");														
 			System.out.println("Test case 13 : Assert for Subscription Title Text is passed");														
 			Thread.sleep(2500);														
@@ -773,7 +773,7 @@ import org.testng.Assert;
 	
 												
 */
-			WebElement silverbuyQuar4=driver.findElement(By.xpath("/html[1]/body[1]/div[7]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/h2[1]"));												
+			WebElement silverbuyQuar4=driver.findElement(By.xpath("(//*[@id=\"BuyPlanForm\"]/div/div/h1/button)[1]"));												
 			if(silverbuyQuar4.isEnabled()) {												
 			System.out.println("Test case 14 : silver buy Quar is present-Test case passed");											
 			}											
@@ -782,7 +782,7 @@ import org.testng.Assert;
 			}											
 			Thread.sleep(1000);											
 												
-			WebElement GoldbuyQuar4=driver.findElement(By.xpath("/html[1]/body[1]/div[7]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/h2[1]"));											
+			WebElement GoldbuyQuar4=driver.findElement(By.xpath("(//*[@id=\"BuyPlanForm\"]/div/div/h1/button)[2]"));											
 			if(GoldbuyQuar4.isEnabled()) {											
 			System.out.println("Test case 15 : Gold buy Quar is present-Test case passed");										
 			}										
@@ -790,7 +790,7 @@ import org.testng.Assert;
 			System.out.println("Test case 15 : Gold buy Quar is Not present-Test case Failed");										
 			}										
 			Thread.sleep(1000);										
-			WebElement platinumbuyQuar4=driver.findElement(By.xpath("/html[1]/body[1]/div[7]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/h2[1]"));											
+			WebElement platinumbuyQuar4=driver.findElement(By.xpath("(//*[@id=\"BuyPlanForm\"]/div/div/h1/button)[3]"));											
 			if(platinumbuyQuar4.isEnabled()) {											
 			System.out.println("Test case 16 : Platinum buy Quar is present-Test case passed");										
 			}										
@@ -801,7 +801,7 @@ import org.testng.Assert;
 												
 			//driver.get("https://qa.lemniska.com/pricing/1/300b9964-5293-4a0c-bfeb-3004d2f24984");									
 			// to purchase the gold quarterly plan 										
-			WebElement Goldbuy4=driver.findElement(By.xpath("/html[1]/body[1]/div[7]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/h1[1]/button[1]"));										
+			WebElement Goldbuy4=driver.findElement(By.xpath("(//*[@id=\"BuyPlanForm\"]/div/div/h1/button)[2]"));										
 			Goldbuy4.click();										
 			Thread.sleep(4500);										
 																					
@@ -843,7 +843,7 @@ import org.testng.Assert;
 				Thread.sleep(2500);								
 												
 			// to purchase the plan again 	/html[1]/body[1]/div[7]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/form[1]/div[1]/div[1]/h1[1]/button[1]									
-				WebElement platinumbuy4=driver.findElement(By.xpath("/html[1]/body[1]/div[7]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/form[1]/div[1]/div[1]/h1[1]/button[1]"));								
+				WebElement platinumbuy4=driver.findElement(By.xpath("(//*[@id=\"BuyPlanForm\"]/div/div/h1/button)[3]"));								
 				platinumbuy4.click();								
 				Thread.sleep(4500);								
 				String Plandetails444=driver.findElement(By.xpath("//h2[contains(text(),'Plan Details')]")).getText();								
@@ -886,7 +886,7 @@ import org.testng.Assert;
 			Thread.sleep(5000);														
 												
 			// To click on get started 														
-			WebElement GetStartedNow2=driver.findElement(By.xpath("//body/div[7]/div[1]/div[1]/div[1]/main[1]/section[1]/div[1]/div[1]/div[1]/a[1]"));												
+			WebElement GetStartedNow2=driver.findElement(By.xpath("//*[@id=\"lower-main-contain\"]/main/section[1]/div/div[1]/div/a"));												
 			if(GetStartedNow2.isEnabled()) {												
 			System.out.println("Test Case 00A : Get started icon is present -Test Case Passed");											
 			}												
@@ -907,7 +907,7 @@ import org.testng.Assert;
 			//////////////////									
 			driver.findElement(By.xpath("//button[@id='dropdownMenuButton']")).click();														
 			Thread.sleep(2000);														
-			driver.findElement(By.xpath("//header/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/a[2]")).click();														
+			driver.findElement(By.xpath("//*[@id=\"header-right-button\"]/div[2]/div[2]/div/div/div[2]/div[2]/a[2]")).click();														
 			Thread.sleep(8000);														
 			System.out.println("Test case 1 : Doctor sign up link is clicked");														
 			//String DoctorSignuptitle=driver.findElement(By.xpath("//h2[contains(text(),'Doctor Sign Up')]")).getText();	
@@ -957,7 +957,7 @@ import org.testng.Assert;
 			Thread.sleep(2000);														
 			Email2.clear();														
 			Thread.sleep(2500);														
-			Email2.sendKeys("anu_MexicoEnglish@yopmail.com");														
+			Email2.sendKeys("anu_MexicoEnglishz1@yopmail.com");														
 			System.out.println("Test case 6 : Random and Correct Keys are added to Email");			
 			
 			
@@ -1023,7 +1023,7 @@ import org.testng.Assert;
 			
 			//driver.get("https://qa.lemniska.com/pricing/Quarterly/bebc0e48-a09d-4a49-aed9-72d6fe753439");
 			
-			String Plantitlepage2=driver.findElement(By.xpath("/html[1]/body[1]/div[7]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/h2[1]")).getText();
+			String Plantitlepage2=driver.findElement(By.xpath("//*[@id=\"lower-main-contain\"]/section/div/div/div[3]/div/div/h2")).getText();
             Assert.assertEquals(Plantitlepage2, "Precios simples que se adaptan a su negocio");														
 			System.out.println("Test case 13 : Assert for Subscription Title Text is passed");														
 			Thread.sleep(2500);														
@@ -1073,7 +1073,7 @@ import org.testng.Assert;
 	
 												
 */
-			WebElement silverbuyQuar2=driver.findElement(By.xpath("/html[1]/body[1]/div[7]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/h2[1]"));												
+			WebElement silverbuyQuar2=driver.findElement(By.xpath("(//*[@id=\"BuyPlanForm\"]/div/div/h1/button)[1]"));												
 			if(silverbuyQuar2.isEnabled()) {												
 			System.out.println("Test case 14 : silver buy Quar is present-Test case passed");											
 			}											
@@ -1082,7 +1082,7 @@ import org.testng.Assert;
 			}											
 			Thread.sleep(1000);											
 												
-			WebElement GoldbuyQuar2=driver.findElement(By.xpath("/html[1]/body[1]/div[7]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/h2[1]"));											
+			WebElement GoldbuyQuar2=driver.findElement(By.xpath("(//*[@id=\"BuyPlanForm\"]/div/div/h1/button)[2]"));											
 			if(GoldbuyQuar2.isEnabled()) {											
 			System.out.println("Test case 15 : Gold buy Quar is present-Test case passed");										
 			}										
@@ -1090,7 +1090,7 @@ import org.testng.Assert;
 			System.out.println("Test case 15 : Gold buy Quar is Not present-Test case Failed");										
 			}										
 			Thread.sleep(1000);										
-			WebElement platinumbuyQuar2=driver.findElement(By.xpath("/html[1]/body[1]/div[7]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/h2[1]"));											
+			WebElement platinumbuyQuar2=driver.findElement(By.xpath("(//*[@id=\"BuyPlanForm\"]/div/div/h1/button)[3]"));											
 			if(platinumbuyQuar2.isEnabled()) {											
 			System.out.println("Test case 16 : Platinum buy Quar is present-Test case passed");										
 			}										
@@ -1101,7 +1101,7 @@ import org.testng.Assert;
 												
 			//driver.get("https://qa.lemniska.com/pricing/1/300b9964-5293-4a0c-bfeb-3004d2f24984");									
 			// to purchase the gold quarterly plan 										
-			WebElement Goldbuy2=driver.findElement(By.xpath("/html[1]/body[1]/div[7]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/h1[1]/button[1]"));										
+			WebElement Goldbuy2=driver.findElement(By.xpath("(//*[@id=\"BuyPlanForm\"]/div/div/h1/button)[2]"));										
 			Goldbuy2.click();										
 			Thread.sleep(4500);										
 																					
@@ -1144,7 +1144,7 @@ import org.testng.Assert;
 				Thread.sleep(2500);								
 												
 			// to purchase the plan again 	/html[1]/body[1]/div[7]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/form[1]/div[1]/div[1]/h1[1]/button[1]									
-				WebElement platinumbuy2=driver.findElement(By.xpath("/html[1]/body[1]/div[7]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/form[1]/div[1]/div[1]/h1[1]/button[1]"));								
+				WebElement platinumbuy2=driver.findElement(By.xpath("(//*[@id=\"BuyPlanForm\"]/div/div/h1/button)[3]"));								
 				platinumbuy2.click();								
 				Thread.sleep(4500);								
 				String Plandetails222=driver.findElement(By.xpath("//h2[contains(text(),'Detalles del plan')]")).getText();								

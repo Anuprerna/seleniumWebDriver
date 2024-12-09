@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="seleniumWebDriver.ReportOnTestNG">
+      <class name="ReportGenerate1.Test_Member">
         <methods>
-          <include name="f"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
+          <include name="test_MemberEnd"/>
+          <include name="test_SearchAndDocListing"/>
+          <include name="test_MemberSignUpStart"/>
         </methods>
-      </class> <!-- seleniumWebDriver.ReportOnTestNG -->
+      </class> <!-- ReportGenerate1.Test_Member -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
